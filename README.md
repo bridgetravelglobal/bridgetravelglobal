@@ -6,7 +6,7 @@
 
 <title>Bridge Travel Solutions | Travel, Jobs & Study Abroad Dubai</title>
 
-<meta name="description" content="Bridge Travel Solutions helps with flights, visas, jobs abroad, and study opportunities. Based in Dubai. Contact us on WhatsApp for fast support." />
+<meta name="description" content="Bridge Travel Solutions based in Dubai offers flight booking, visa assistance, hotel reservations, jobs abroad support, and study abroad guidance." />
 
 <style>
 body {
@@ -16,7 +16,7 @@ body {
   color: white;
 }
 
-/* TOP BAR (REMOVED BLUE LOOK → PURE BLACK PREMIUM) */
+/* TOP BAR */
 .topbar {
   background: #000;
   text-align: center;
@@ -35,7 +35,7 @@ body {
 }
 
 .hero img {
-  width: 180px; /* BIGGER LOGO */
+  width: 180px;
   margin-bottom: 15px;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(255,215,0,0.25);
@@ -94,11 +94,22 @@ h2 {
   border-radius: 12px;
   border: 1px solid #222;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-5px);
   border-color: gold;
+}
+
+/* SERVICE BOX */
+#serviceBox {
+  margin-top: 30px;
+  color: #ccc;
+  background: #111;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #222;
 }
 
 /* CONTACT LINKS */
@@ -107,7 +118,7 @@ h2 {
   text-decoration: none;
 }
 
-/* SOCIAL ICONS */
+/* SOCIALS */
 .socials {
   display: flex;
   justify-content: center;
@@ -124,9 +135,9 @@ h2 {
   background: #141414;
   border: 1px solid #333;
   border-radius: 50%;
-  color: white;
   text-decoration: none;
   font-size: 20px;
+  color: white;
   transition: 0.3s;
 }
 
@@ -135,7 +146,7 @@ h2 {
   transform: translateY(-3px);
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -176,21 +187,12 @@ footer {
     Book on WhatsApp
   </a>
 
-  <!-- SOCIAL ICONS -->
+  <!-- SOCIALS -->
   <div class="socials">
-
-    <!-- Instagram (placeholder) -->
     <a href="#" title="Instagram">📸</a>
-
-    <!-- Facebook (placeholder) -->
     <a href="#" title="Facebook">📘</a>
-
-    <!-- Twitter/X (placeholder) -->
     <a href="#" title="Twitter">🐦</a>
-
-    <!-- TikTok (ACTIVE) -->
     <a href="https://www.tiktok.com/@bridgetravelglobal" target="_blank" title="TikTok">🎵</a>
-
   </div>
 
 </div>
@@ -199,30 +201,37 @@ footer {
 <div class="container">
   <h2>About Us</h2>
   <p style="color:#ccc; line-height:1.6;">
-    We are a Dubai-based travel and opportunity agency helping people travel, work, and study abroad.
-    We provide full support including visas, bookings, and international opportunities.
+    Bridge Travel Solutions is a Dubai-based travel and opportunity agency helping people travel,
+    study, and work abroad. We provide end-to-end support including documentation, bookings, and guidance.
   </p>
 </div>
 
 <!-- SERVICES -->
 <div class="container">
-  <h2>Our Services</h2>
+  <h2>Our Services (Click to Learn More)</h2>
 
   <div class="grid">
-    <div class="card">✈️ Flight Booking</div>
-    <div class="card">🛂 Visa Assistance</div>
-    <div class="card">🏨 Hotel Reservations</div>
-    <div class="card">🌍 Jobs Abroad Support</div>
-    <div class="card">🎓 Study Abroad Guidance</div>
-    <div class="card">📄 Travel Consultation</div>
+
+    <div class="card" onclick="showService('flights')">✈️ Flight Booking</div>
+    <div class="card" onclick="showService('visa')">🛂 Visa Assistance</div>
+    <div class="card" onclick="showService('hotels')">🏨 Hotel Reservations</div>
+    <div class="card" onclick="showService('jobs')">🌍 Jobs Abroad Support</div>
+    <div class="card" onclick="showService('study')">🎓 Study Abroad Guidance</div>
+    <div class="card" onclick="showService('travel')">📄 Travel Consultation</div>
+
+  </div>
+
+  <div id="serviceBox">
+    Click a service above to see full details.
   </div>
 </div>
 
 <!-- CONTACT -->
 <div class="container">
-  <h2>Contact</h2>
+  <h2>Contact Us</h2>
 
   <div class="grid">
+
     <div class="card">
       📧 Email<br/>
       <a class="link" href="mailto:bridgetravelsolutionsglobal@gmail.com">
@@ -243,6 +252,7 @@ footer {
         @bridgetravelglobal
       </a>
     </div>
+
   </div>
 </div>
 
@@ -276,6 +286,39 @@ footer {
 <footer>
   © 2026 Bridge Travel Solutions | Dubai
 </footer>
+
+<!-- SCRIPT -->
+<script>
+function showService(type) {
+  let content = "";
+
+  if (type === "flights") {
+    content = "✈️ Flight Booking: We provide international and domestic flight booking support with the best available prices. We compare airlines, routes, and timings to give you the most affordable options. We assist with urgent bookings and flexible travel planning. Our team ensures smooth travel preparation and guidance on baggage rules. We make sure your journey is stress-free from booking to departure.";
+  }
+
+  if (type === "visa") {
+    content = "🛂 Visa Assistance: We help with tourist, work, and study visa applications. We guide you through documentation, embassy requirements, and submission processes. Our support reduces errors and improves approval chances. We provide step-by-step assistance tailored to your destination. We stay updated with visa regulations for different countries.";
+  }
+
+  if (type === "hotels") {
+    content = "🏨 Hotel Reservations: We help you book safe, comfortable, and affordable hotels worldwide. We match hotels based on your budget and location preferences. We ensure trusted and verified accommodation options. We assist with short-term and long-term stays. Our goal is to make your stay convenient and secure.";
+  }
+
+  if (type === "jobs") {
+    content = "🌍 Jobs Abroad Support: We guide you in finding international job opportunities. We help with CV preparation and application processes. We connect candidates with verified opportunities. We provide interview and relocation guidance. Our goal is to support safe and legal employment abroad.";
+  }
+
+  if (type === "study") {
+    content = "🎓 Study Abroad Guidance: We assist students in applying to international universities. We help with course selection, admissions, and documentation. We provide scholarship and visa guidance. We support you throughout the application journey. Our goal is to make studying abroad simple and achievable.";
+  }
+
+  if (type === "travel") {
+    content = "📄 Travel Consultation: We provide personalized travel planning and advice. We help you understand requirements, costs, and destinations. We assist with itinerary planning and preparation. We guide first-time travelers step by step. Our aim is to make travel simple and well-organized.";
+  }
+
+  document.getElementById("serviceBox").innerHTML = content;
+}
+</script>
 
 </body>
 </html>
