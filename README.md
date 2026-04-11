@@ -35,7 +35,7 @@ body {
 /* BUTTON */
 .btn {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 14px 26px;
   background: gold;
   color: black;
@@ -81,6 +81,16 @@ h2 {
   border-color: gold;
 }
 
+/* LINKS */
+.link {
+  color: gold;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 /* FLOATING WHATSAPP */
 .whatsapp {
   position: fixed;
@@ -92,7 +102,6 @@ h2 {
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 /* FOOTER */
@@ -107,12 +116,11 @@ footer {
 
 <body>
 
-<!-- HERO (WITH LOGO) -->
+<!-- HERO -->
 <div class="hero">
 
-  <img src="logo.png" alt="Bridge Travel Solutions Logo"
-       style="width:130px;
-              margin-bottom:15px;
+  <img src="logo.png" alt="Logo"
+       style="width:130px; margin-bottom:15px;
               border-radius:12px;
               box-shadow:0 0 20px rgba(255,215,0,0.3);" />
 
@@ -129,8 +137,8 @@ footer {
 <div class="container">
   <h2>About Us</h2>
   <p style="color:#ccc; line-height:1.6;">
-    We are a Dubai-based travel and opportunity support agency helping individuals travel,
-    study, and work abroad. We provide end-to-end assistance from documentation to placement.
+    We are a Dubai-based travel and opportunity agency helping people travel, work, and study abroad.
+    We provide full end-to-end support including documentation, bookings, and placement guidance.
   </p>
 </div>
 
@@ -148,13 +156,41 @@ footer {
   </div>
 </div>
 
+<!-- CONTACT -->
+<div class="container">
+  <h2>Contact Us</h2>
+
+  <div class="grid">
+    <div class="card">
+      📧 Email<br/>
+      <a class="link" href="mailto:bridgetravelsolutionsglobal@gmail.com">
+        bridgetravelsolutionsglobal@gmail.com
+      </a>
+    </div>
+
+    <div class="card">
+      📲 WhatsApp<br/>
+      <a class="link" href="https://wa.me/971583017066" target="_blank">
+        +971 58 301 7066
+      </a>
+    </div>
+
+    <div class="card">
+      🎵 TikTok<br/>
+      <a class="link" href="https://www.tiktok.com/@bridgetravelglobal" target="_blank">
+        @bridgetravelglobal
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- WHY US -->
 <div class="container">
   <h2>Why Choose Us</h2>
 
   <div class="grid">
     <div class="card">Fast & Reliable Support</div>
-    <div class="card">Dubai-Based Team</div>
+    <div class="card">Dubai-Based Agency</div>
     <div class="card">End-to-End Service</div>
     <div class="card">Trusted Guidance</div>
   </div>
@@ -163,7 +199,6 @@ footer {
 <!-- CTA -->
 <div class="container" style="text-align:center;">
   <h2>Start Your Journey Today</h2>
-  <p style="color:#ccc;">Click below to speak with us instantly</p>
 
   <a class="btn" href="https://wa.me/971583017066" target="_blank">
     Chat on WhatsApp
@@ -177,7 +212,7 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Bridge Travel Solutions
+  © 2026 Bridge Travel Solutions | Dubai
 </footer>
 
 </body>
