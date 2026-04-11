@@ -95,6 +95,7 @@ h2 {
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
@@ -106,13 +107,22 @@ footer {
 
 <body>
 
-<!-- HERO -->
+<!-- HERO (WITH LOGO) -->
 <div class="hero">
+
+  <img src="logo.png" alt="Bridge Travel Solutions Logo"
+       style="width:130px;
+              margin-bottom:15px;
+              border-radius:12px;
+              box-shadow:0 0 20px rgba(255,215,0,0.3);" />
+
   <h1>Bridge Travel Solutions</h1>
   <p>Travel ✈️ | Jobs Abroad 🌍 | Study Opportunities 🎓</p>
+
   <a class="btn" href="https://wa.me/971583017066" target="_blank">
     Book on WhatsApp
   </a>
+
 </div>
 
 <!-- ABOUT -->
@@ -154,6 +164,7 @@ footer {
 <div class="container" style="text-align:center;">
   <h2>Start Your Journey Today</h2>
   <p style="color:#ccc;">Click below to speak with us instantly</p>
+
   <a class="btn" href="https://wa.me/971583017066" target="_blank">
     Chat on WhatsApp
   </a>
@@ -164,6 +175,7 @@ footer {
   WhatsApp
 </a>
 
+<!-- FOOTER -->
 <footer>
   © 2026 Bridge Travel Solutions
 </footer>
