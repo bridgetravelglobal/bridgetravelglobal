@@ -1,140 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bridge Travel Solutions</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bridge Travel Solutions</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #070707;
+  color: white;
+}
 
-    header {
-      background: linear-gradient(90deg, #000000, #1a1a1a);
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 2px solid gold;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  border-bottom: 2px solid gold;
+}
 
-    h1 {
-      color: gold;
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+.hero h1 {
+  font-size: 48px;
+  color: gold;
+  margin-bottom: 10px;
+}
 
-    p.subtitle {
-      font-size: 18px;
-      color: #ccc;
-    }
+.hero p {
+  color: #ccc;
+  font-size: 18px;
+}
 
-    .container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 26px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    .section {
-      margin-bottom: 40px;
-    }
+.btn:hover {
+  background: #d4af37;
+}
 
-    h2 {
-      color: gold;
-      margin-bottom: 10px;
-    }
+/* SECTIONS */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 20px;
+}
 
-    .card {
-      background: #141414;
-      padding: 20px;
-      border-left: 3px solid gold;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
+h2 {
+  color: gold;
+  margin-bottom: 20px;
+}
 
-    .cta {
-      text-align: center;
-      margin-top: 40px;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
 
-    .whatsapp-btn {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 15px 25px;
-      font-size: 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+.card {
+  background: #141414;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
 
-    .whatsapp-btn:hover {
-      background: #1ebe5d;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  border-color: gold;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      border-top: 1px solid #222;
-      margin-top: 40px;
-    }
-  </style>
+/* FLOATING WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  border-top: 1px solid #222;
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
   <h1>Bridge Travel Solutions</h1>
-  <p class="subtitle">Your trusted partner for Travel, Jobs & Education Abroad</p>
-</header>
-
-<div class="container">
-
-  <div class="section">
-    <h2>🌍 About Us</h2>
-    <div class="card">
-      We help individuals and families travel, study, and work abroad. From flight bookings to visa guidance, education pathways, and job opportunities — we bridge your future globally.
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>✈️ Our Services</h2>
-
-    <div class="card">Flight Booking Assistance</div>
-    <div class="card">Visa Application Support</div>
-    <div class="card">Hotel & Travel Arrangements</div>
-    <div class="card">Study Abroad Guidance</div>
-    <div class="card">International Job Opportunities Support</div>
-
-  </div>
-
-  <div class="section">
-    <h2>📍 Why Choose Us</h2>
-    <div class="card">Fast and reliable support</div>
-    <div class="card">Dubai-based assistance</div>
-    <div class="card">Affordable and transparent service</div>
-    <div class="card">End-to-end travel solutions</div>
-  </div>
-
-  <div class="cta">
-    <h2>💬 Talk to Us Instantly</h2>
-    <p>Click below to chat with us on WhatsApp</p>
-
-    <a class="whatsapp-btn"
-       href="https://wa.me/971583017066"
-       target="_blank">
-       Chat on WhatsApp
-    </a>
-  </div>
-
+  <p>Travel ✈️ | Jobs Abroad 🌍 | Study Opportunities 🎓</p>
+  <a class="btn" href="https://wa.me/971583017066" target="_blank">
+    Book on WhatsApp
+  </a>
 </div>
 
+<!-- ABOUT -->
+<div class="container">
+  <h2>About Us</h2>
+  <p style="color:#ccc; line-height:1.6;">
+    We are a Dubai-based travel and opportunity support agency helping individuals travel,
+    study, and work abroad. We provide end-to-end assistance from documentation to placement.
+  </p>
+</div>
+
+<!-- SERVICES -->
+<div class="container">
+  <h2>Our Services</h2>
+
+  <div class="grid">
+    <div class="card">✈️ Flight Booking</div>
+    <div class="card">🛂 Visa Assistance</div>
+    <div class="card">🏨 Hotel Reservations</div>
+    <div class="card">🌍 Jobs Abroad Support</div>
+    <div class="card">🎓 Study Abroad Guidance</div>
+    <div class="card">📄 Travel Consultation</div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<div class="container">
+  <h2>Why Choose Us</h2>
+
+  <div class="grid">
+    <div class="card">Fast & Reliable Support</div>
+    <div class="card">Dubai-Based Team</div>
+    <div class="card">End-to-End Service</div>
+    <div class="card">Trusted Guidance</div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="container" style="text-align:center;">
+  <h2>Start Your Journey Today</h2>
+  <p style="color:#ccc;">Click below to speak with us instantly</p>
+  <a class="btn" href="https://wa.me/971583017066" target="_blank">
+    Chat on WhatsApp
+  </a>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/971583017066" target="_blank">
+  WhatsApp
+</a>
+
 <footer>
-  © 2026 Bridge Travel Solutions. All rights reserved.
+  © 2026 Bridge Travel Solutions
 </footer>
 
 </body>
