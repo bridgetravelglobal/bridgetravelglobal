@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Bridge Travel Solutions</title>
+
+<title>Bridge Travel Solutions | Travel, Jobs & Study Abroad Dubai</title>
+
+<meta name="description" content="Bridge Travel Solutions helps with flights, visas, jobs abroad, and study opportunities. Based in Dubai. Contact us on WhatsApp for fast support." />
 
 <style>
 body {
@@ -13,12 +16,29 @@ body {
   color: white;
 }
 
+/* TOP BAR (REMOVED BLUE LOOK → PURE BLACK PREMIUM) */
+.topbar {
+  background: #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #aaa;
+  border-bottom: 1px solid #222;
+}
+
 /* HERO */
 .hero {
   text-align: center;
-  padding: 90px 20px;
+  padding: 100px 20px;
   background: radial-gradient(circle at top, #1a1a1a, #000);
   border-bottom: 2px solid gold;
+}
+
+.hero img {
+  width: 180px; /* BIGGER LOGO */
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,215,0,0.25);
 }
 
 .hero h1 {
@@ -81,17 +101,41 @@ h2 {
   border-color: gold;
 }
 
-/* LINKS */
+/* CONTACT LINKS */
 .link {
   color: gold;
   text-decoration: none;
 }
 
-.link:hover {
-  text-decoration: underline;
+/* SOCIAL ICONS */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
 }
 
-/* FLOATING WHATSAPP */
+.socials a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #141414;
+  border: 1px solid #333;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  border-color: gold;
+  transform: translateY(-3px);
+}
+
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -116,13 +160,14 @@ footer {
 
 <body>
 
+<div class="topbar">
+  Dubai Based Travel & Opportunity Agency
+</div>
+
 <!-- HERO -->
 <div class="hero">
 
-  <img src="logo.png" alt="Logo"
-       style="width:130px; margin-bottom:15px;
-              border-radius:12px;
-              box-shadow:0 0 20px rgba(255,215,0,0.3);" />
+  <img src="logo.png" alt="Bridge Travel Solutions Logo" />
 
   <h1>Bridge Travel Solutions</h1>
   <p>Travel ✈️ | Jobs Abroad 🌍 | Study Opportunities 🎓</p>
@@ -131,6 +176,23 @@ footer {
     Book on WhatsApp
   </a>
 
+  <!-- SOCIAL ICONS -->
+  <div class="socials">
+
+    <!-- Instagram (placeholder) -->
+    <a href="#" title="Instagram">📸</a>
+
+    <!-- Facebook (placeholder) -->
+    <a href="#" title="Facebook">📘</a>
+
+    <!-- Twitter/X (placeholder) -->
+    <a href="#" title="Twitter">🐦</a>
+
+    <!-- TikTok (ACTIVE) -->
+    <a href="https://www.tiktok.com/@bridgetravelglobal" target="_blank" title="TikTok">🎵</a>
+
+  </div>
+
 </div>
 
 <!-- ABOUT -->
@@ -138,7 +200,7 @@ footer {
   <h2>About Us</h2>
   <p style="color:#ccc; line-height:1.6;">
     We are a Dubai-based travel and opportunity agency helping people travel, work, and study abroad.
-    We provide full end-to-end support including documentation, bookings, and placement guidance.
+    We provide full support including visas, bookings, and international opportunities.
   </p>
 </div>
 
@@ -158,7 +220,7 @@ footer {
 
 <!-- CONTACT -->
 <div class="container">
-  <h2>Contact Us</h2>
+  <h2>Contact</h2>
 
   <div class="grid">
     <div class="card">
@@ -170,7 +232,7 @@ footer {
 
     <div class="card">
       📲 WhatsApp<br/>
-      <a class="link" href="https://wa.me/971583017066" target="_blank">
+      <a class="link" href="https://wa.me/971583017066">
         +971 58 301 7066
       </a>
     </div>
@@ -205,7 +267,7 @@ footer {
   </a>
 </div>
 
-<!-- FLOATING WHATSAPP -->
+<!-- WHATSAPP FLOAT -->
 <a class="whatsapp" href="https://wa.me/971583017066" target="_blank">
   WhatsApp
 </a>
