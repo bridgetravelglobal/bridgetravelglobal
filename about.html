@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bridge Travel Solutions | Travel, Jobs & Study Abroad</title>
+<title>About Us | Bridge Travel Solutions</title>
 
 <style>
+
 body{
 margin:0;
 font-family:Arial;
@@ -18,72 +19,59 @@ color:white;
 nav{
 display:flex;
 justify-content:center;
-gap:25px;
-padding:15px;
-background:#000;
-border-bottom:1px solid gold;
+gap:30px;
+padding:18px;
+background:rgba(0,0,0,0.85);
 position:sticky;
 top:0;
 }
 
 nav a{
-color:#ccc;
+color:#ddd;
 text-decoration:none;
-font-size:14px;
+font-size:17px;
 }
 
-nav a:hover{color:gold;}
+nav a:hover{
+color:#f5c542;
+}
 
 /* HERO */
 .hero{
-position:relative;
+height:60vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-padding:120px 20px;
-background:url('https://images.unsplash.com/photo-1502920917128-1aa500764ce7') center/cover;
+background:url('https://images.unsplash.com/photo-1502920917128-1aa500764b4f') center/cover;
+position:relative;
 }
 
-.hero::before{
+.hero::after{
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.75);
+background:rgba(0,0,0,0.65);
 }
 
 .hero-content{
 position:relative;
-max-width:900px;
-margin:auto;
-}
-
-.hero img{
-width:170px;
-margin-bottom:10px;
+z-index:2;
 }
 
 .hero h1{
-color:gold;
-font-size:48px;
-margin:10px 0;
+font-size:50px;
+color:#f5c542;
 }
 
 .hero p{
 color:#ccc;
-font-size:16px;
-line-height:1.6;
+font-size:18px;
+max-width:700px;
+margin:auto;
 }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 28px;
-background:gold;
-color:black;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* SECTION */
+/* SECTIONS */
 .container{
 max-width:1100px;
 margin:auto;
@@ -91,37 +79,26 @@ padding:60px 20px;
 }
 
 h2{
-color:gold;
+color:#f5c542;
 text-align:center;
-margin-bottom:30px;
+margin-bottom:20px;
+font-size:30px;
 }
 
-/* ABOUT */
-.about{
-background:#111;
-padding:25px;
-border-radius:12px;
-border:1px solid #222;
-line-height:1.7;
+p{
 color:#ccc;
+line-height:1.7;
+text-align:center;
+max-width:900px;
+margin:auto;
 }
 
-/* TRUST STRIP */
-.trust{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:20px;
-color:#aaa;
-font-size:13px;
-}
-
-/* SERVICES */
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
+margin-top:30px;
 }
 
 .card{
@@ -129,62 +106,68 @@ background:#111;
 padding:20px;
 border-radius:12px;
 border:1px solid #222;
-text-align:left;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#f5c542;
 }
 
 .card h3{
-color:gold;
+color:#f5c542;
 }
 
-.card p{
-color:#ccc;
-line-height:1.5;
-font-size:14px;
-}
-
-.small-btn{
-display:inline-block;
-margin-top:10px;
-color:black;
-background:gold;
-padding:8px 14px;
-border-radius:30px;
-text-decoration:none;
-font-size:13px;
-font-weight:bold;
+/* VALUES ICON STYLE */
+.icon{
+font-size:30px;
+margin-bottom:10px;
 }
 
 /* CTA */
 .cta{
 text-align:center;
-padding:50px 20px;
+padding:60px 20px;
 background:#111;
-border-top:1px solid gold;
-border-bottom:1px solid gold;
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#f5c542;
+color:black;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+margin-top:20px;
+}
+
+.email-btn{
+display:inline-block;
+padding:15px 30px;
+background:#333;
+color:white;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+margin-left:10px;
 }
 
 footer{
 text-align:center;
 padding:20px;
 color:#777;
+margin-top:20px;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:14px 18px;
-border-radius:50px;
-color:white;
-text-decoration:none;
-}
 </style>
+
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -196,85 +179,115 @@ text-decoration:none;
 <!-- HERO -->
 <div class="hero">
 <div class="hero-content">
+<h1>About Bridge Travel Solutions</h1>
+<p>Built from real travel experience, we guide people toward global opportunities with trust, clarity, and support.</p>
+</div>
+</div>
 
-<img src="logo.png">
-
-<h1>Bridge Travel Solutions</h1>
+<!-- STORY -->
+<div class="container">
+<h2>Our Story</h2>
 
 <p>
-We help individuals access global travel, job opportunities, and education pathways with guided support from start to finish.
+Bridge Travel Solutions was founded by an African traveler who experienced firsthand the challenges people face when trying to move abroad for better opportunities. Through years of navigating different countries, systems, and travel processes, he understood how confusing and overwhelming international travel and relocation can be without the right guidance.
+
+What started as personal experience and helping individuals informally has grown into a structured support platform based in Dubai. The goal was simple — to create a trusted bridge between people and global opportunities.
+
+Today, Bridge Travel Solutions exists to make travel, work, and study abroad more accessible, transparent, and stress-free. We focus on guiding individuals with real experience, not guesswork or misleading information.
 </p>
 
-<a class="btn" href="contact.html">Start Your Journey</a>
-
-<div class="trust">
-<span>✔ Dubai-Based Support</span>
-<span>✔ Global Travel Guidance</span>
-<span>✔ Job & Study Assistance</span>
-<span>✔ Fast Response Service</span>
 </div>
 
-</div>
-</div>
-
-<!-- ABOUT -->
+<!-- MISSION / VISION -->
 <div class="container">
-<h2>Who We Are</h2>
 
-<div class="about">
-Bridge Travel Solutions was created from real travel experience and understanding of how difficult it can be to navigate international opportunities.
-The founder experienced challenges moving across countries and accessing reliable information, which inspired the creation of a support system for others.
-Today, we guide people through travel arrangements, visa processes, job opportunities abroad, and study pathways.
-Our goal is to simplify global access and provide clear, honest, and practical support. 
-We believe that opportunity should not be complicated, and we exist to make the process easier for individuals and families.
-</div>
-</div>
-
-<!-- SERVICES PREVIEW -->
-<div class="container">
-<h2>What We Offer</h2>
+<h2>Mission & Vision</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>✈️ Flights & Travel</h3>
-<p>We assist with flight bookings and travel planning for individuals and groups worldwide.</p>
-<a class="small-btn" href="services.html">Read More</a>
+<div class="icon">🎯</div>
+<h3>Our Mission</h3>
+<p>
+To help individuals access global opportunities through honest, practical, and step-by-step travel, work, and study support.
+</p>
 </div>
 
 <div class="card">
-<h3>🛂 Visa Support</h3>
-<p>Guidance for travel, work, and study visa applications with step-by-step support.</p>
-<a class="small-btn" href="services.html">Read More</a>
+<div class="icon">🌍</div>
+<h3>Our Vision</h3>
+<p>
+To become a trusted global bridge that connects people to life-changing opportunities across countries.
+</p>
+</div>
+
+</div>
+</div>
+
+<!-- VALUES -->
+<div class="container">
+
+<h2>Our Values</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">✔</div>
+<h3>Trust</h3>
+<p>We prioritize honesty and transparency in every interaction.</p>
 </div>
 
 <div class="card">
-<h3>🌍 Jobs Abroad</h3>
-<p>We connect people to verified job opportunities and support relocation processes.</p>
-<a class="small-btn" href="services.html">Read More</a>
+<div class="icon">⚡</div>
+<h3>Reliability</h3>
+<p>We provide consistent and dependable support at every stage.</p>
 </div>
 
 <div class="card">
-<h3>🎓 Study Abroad</h3>
-<p>Assistance with university applications, admissions, and student visa processes.</p>
-<a class="small-btn" href="services.html">Read More</a>
+<div class="icon">🤝</div>
+<h3>Support</h3>
+<p>We guide clients step-by-step until their journey is complete.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3>Global Access</h3>
+<p>We connect people to opportunities across borders.</p>
 </div>
 
 </div>
+
+</div>
+
+<!-- HOW WE WORK -->
+<div class="container">
+
+<h2>How We Work</h2>
+
+<p>
+We follow a simple and structured process: understanding your goal, identifying the best pathway, providing guidance through documentation and preparation, and supporting you until your journey is complete. Our approach ensures clarity at every stage so you never feel lost or confused.
+</p>
+
 </div>
 
 <!-- CTA -->
 <div class="cta">
-<h2>Ready to Move Forward?</h2>
-<p style="color:#ccc;">Let’s help you take the next step toward travel, work, or study abroad.</p>
-<a class="btn" href="contact.html">Contact Us on WhatsApp</a>
+
+<h2>Start Your Journey With Confidence</h2>
+
+<p>Speak to us today and let us guide you step-by-step.</p>
+
+<a class="btn" href="https://wa.me/971583017066">WhatsApp Us</a>
+
+<a class="email-btn" href="mailto:bridgetravelsolutionsglobal@gmail.com">
+Email Us
+</a>
+
 </div>
 
 <footer>
 © 2026 Bridge Travel Solutions | Dubai UAE
 </footer>
-
-<a class="whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
 
 </body>
 </html>
