@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Bridge Travel Solutions</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
+
 body{
 margin:0;
 font-family:Arial;
@@ -30,9 +33,19 @@ text-decoration:none;
 
 nav a:hover{color:gold;}
 
+/* TRUST STRIP (NEW PREMIUM) */
+.trust{
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+text-align:center;
+padding:12px;
+font-size:13px;
+color:#fff;
+border-bottom:1px solid rgba(255,215,0,0.2);
+}
+
 /* CONTAINER */
 .container{
-max-width:800px;
+max-width:900px;
 margin:auto;
 padding:60px 20px;
 }
@@ -40,30 +53,68 @@ padding:60px 20px;
 h1{
 text-align:center;
 color:gold;
-margin-bottom:30px;
+margin-bottom:10px;
 }
 
-/* CONTACT BOX */
+.sub{
+text-align:center;
+color:#aaa;
+margin-bottom:25px;
+}
+
+/* RESPONSE BADGE */
+.badge{
+text-align:center;
+margin-bottom:25px;
+}
+
+.badge span{
+background:rgba(255,215,0,0.1);
+border:1px solid rgba(255,215,0,0.3);
+padding:8px 14px;
+border-radius:30px;
+font-size:13px;
+color:#fff;
+}
+
+/* CONTACT BOX PREMIUM */
 .contact-box{
-background:#111;
+background:rgba(17,17,17,0.9);
+backdrop-filter:blur(10px);
 padding:30px;
-border-radius:12px;
+border-radius:16px;
 border:1px solid #222;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+position:relative;
+overflow:hidden;
+}
+
+/* BACKGROUND IMAGE INSIDE BOX */
+.contact-box::before{
+content:"";
+position:absolute;
+inset:0;
+background:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover;
+opacity:0.08;
+z-index:0;
 }
 
 /* FORM */
 form{
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:12px;
+position:relative;
+z-index:2;
 }
 
-input, textarea{
+input, textarea, select{
 padding:12px;
 border:none;
 border-radius:8px;
 background:#222;
 color:white;
+outline:none;
 }
 
 textarea{
@@ -78,16 +129,23 @@ border:none;
 border-radius:50px;
 font-weight:bold;
 cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.03);
 }
 
 /* INFO */
 .info{
-margin-top:30px;
+margin-top:25px;
 color:#ccc;
 line-height:1.6;
+position:relative;
+z-index:2;
 }
 
-/* SOCIALS */
+/* SOCIAL ICONS PREMIUM */
 .socials{
 display:flex;
 gap:15px;
@@ -95,9 +153,22 @@ margin-top:15px;
 }
 
 .socials a{
-color:gold;
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#222;
+color:white;
 text-decoration:none;
-font-size:14px;
+transition:0.3s;
+}
+
+.socials a:hover{
+background:gold;
+color:black;
+transform:translateY(-3px);
 }
 
 /* FOOTER */
@@ -108,17 +179,30 @@ color:#777;
 border-top:1px solid #222;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT PULSE */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:14px 18px;
-border-radius:50px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
 color:white;
-text-decoration:none;
+font-size:26px;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+animation:pulse 1.5s infinite;
 }
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
 </style>
 </head>
 
@@ -133,15 +217,34 @@ text-decoration:none;
 <a href="contact.html">Contact</a>
 </nav>
 
+<!-- TRUST -->
+<div class="trust">
+🌍 Dubai Office • 🇲🇼 Malawi Support Team • ⚡ Response within 1–6 Hours
+</div>
+
 <div class="container">
 
 <h1>Contact Us</h1>
+<p class="sub">Send your enquiry and get real guidance from our travel team</p>
+
+<div class="badge">
+<span>🔥 Fast Response • Trusted Support • Real Human Assistance</span>
+</div>
 
 <div class="contact-box">
 
 <form onsubmit="sendToWhatsApp(event)">
+
 <input type="text" id="name" placeholder="Your Name" required>
-<input type="text" id="phone" placeholder="Your Phone / WhatsApp" required>
+<input type="text" id="phone" placeholder="Your WhatsApp Number" required>
+
+<select id="country">
+<option>Malawi</option>
+<option>Zambia</option>
+<option>South Africa</option>
+<option>UAE</option>
+<option>Other</option>
+</select>
 
 <select id="service">
 <option>Flight Booking</option>
@@ -152,20 +255,22 @@ text-decoration:none;
 <option>City Tours</option>
 </select>
 
-<textarea id="message" placeholder="Your Message"></textarea>
+<textarea id="message" placeholder="Tell us your travel goal..."></textarea>
 
-<button type="submit">Send Enquiry</button>
+<button type="submit">Send Enquiry on WhatsApp</button>
 </form>
 
 <div class="info">
-<p><strong>Phone / WhatsApp:</strong> +971 58 301 7066</p>
+<p><strong>WhatsApp:</strong> +971 58 301 7066</p>
 <p><strong>Email:</strong> bridgetravelsolutionsglobal@gmail.com</p>
 
 <div class="socials">
-<a href="#">Instagram</a>
-<a href="#">Facebook</a>
-<a href="#">Twitter</a>
-<a href="https://www.tiktok.com/@bridgetravelglobal" target="_blank">TikTok</a>
+
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="https://www.tiktok.com/@bridgetravelglobal" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+
 </div>
 
 </div>
@@ -175,10 +280,13 @@ text-decoration:none;
 </div>
 
 <footer>
-© 2026 Bridge Travel Solutions
+© 2026 Bridge Travel Solutions | Dubai UAE
 </footer>
 
-<a class="whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
+<!-- FLOAT WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/971583017066">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <script>
 function sendToWhatsApp(event){
@@ -187,11 +295,13 @@ event.preventDefault();
 let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
 let service = document.getElementById("service").value;
+let country = document.getElementById("country").value;
 let message = document.getElementById("message").value;
 
 let url = "https://wa.me/971583017066?text="
 + "Name: " + name + "%0A"
 + "Phone: " + phone + "%0A"
++ "Country: " + country + "%0A"
 + "Service: " + service + "%0A"
 + "Message: " + message;
 
