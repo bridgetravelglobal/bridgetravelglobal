@@ -17,7 +17,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* 🚨 REMOVE GHOST / README TEXT */
+/* REMOVE GHOST TEXT */
 body > h1,
 body > h2,
 body > p:first-of-type,
@@ -27,7 +27,7 @@ header,
 display:none !important;
 }
 
-/* BRAND TOP */
+/* TOP LOGO */
 .brand-strip{
 display:flex;
 justify-content:center;
@@ -36,8 +36,8 @@ background:#050505;
 }
 
 .brand-strip img{
-width:130px;
-opacity:0.95;
+width:150px; /* 🔥 increased logo size */
+opacity:0.98;
 }
 
 /* NAV */
@@ -58,7 +58,7 @@ z-index:1000;
 nav a{
 color:#ddd;
 text-decoration:none;
-font-size:14px;
+font-size:16px; /* 🔥 increased font size */
 letter-spacing:1px;
 transition:0.3s;
 }
@@ -89,13 +89,13 @@ object-fit:cover;
 z-index:0;
 }
 
-/* AIRPORT IMAGE LAYER */
+/* AIRPORT IMAGE (LIGHTER NOW) */
 .hero::before{
 content:"";
 position:absolute;
 inset:0;
 background:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df') center/cover;
-opacity:0.25;
+opacity:0.45; /* 🔥 brighter than before */
 z-index:1;
 }
 
@@ -104,7 +104,7 @@ z-index:1;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.60);
 z-index:2;
 }
 
@@ -146,7 +146,7 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* STATS */
+/* STATS SECTION */
 .stats-section{
 background:url('https://images.unsplash.com/photo-1526779259212-939e64788e3c') center/cover;
 padding:80px 20px;
@@ -154,11 +154,12 @@ text-align:center;
 position:relative;
 }
 
+/* 🔥 LIGHTER BACKGROUND */
 .stats-section::before{
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.85);
+background:rgba(0,0,0,0.70);
 }
 
 .stats-content{
@@ -381,7 +382,7 @@ to{opacity:1; transform:translateY(0);}
 
 <body>
 
-<!-- TOP LOGO ONLY -->
+<!-- TOP LOGO -->
 <div class="brand-strip">
 <img src="logo.png">
 </div>
