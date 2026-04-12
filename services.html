@@ -37,39 +37,67 @@ nav a:hover{
 color:#f5c542;
 }
 
-/* HERO */
-.hero{
-text-align:center;
-padding:90px 20px;
+<!-- HERO (PREMIUM LIGHT VISUAL) -->
+<div class="hero" style="
 background:url('https://images.unsplash.com/photo-1502920917128-1aa500764b4f') center/cover;
 position:relative;
-}
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+">
 
-.hero::after{
-content:"";
+<div style="
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.75);
-}
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,0.65),
+rgba(0,0,0,0.55),
+rgba(0,0,0,0.7)
+);
+"></div>
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:850px;
-margin:auto;
-}
+<div style="
+position:absolute;
+inset:0;
+background:rgba(255,255,255,0.04);
+"></div>
 
-.hero h1{
-color:#f5c542;
-font-size:52px;
-}
+<div style="position:relative;z-index:2;max-width:850px;padding:20px;">
 
-.hero p{
-color:#ccc;
+<h1 style="
+color:#ffffff;
+font-size:58px;
+letter-spacing:1px;
+margin-bottom:10px;
+text-shadow:0 4px 20px rgba(0,0,0,0.7);
+">
+Our Services
+</h1>
+
+<p style="
+color:#e6e6e6;
 font-size:18px;
-line-height:1.6;
-}
+line-height:1.7;
+text-shadow:0 3px 15px rgba(0,0,0,0.6);
+">
+We simplify travel, jobs, visas, and relocation processes with real guidance and step-by-step support until your journey is complete.
+</p>
 
+<div style="
+margin-top:25px;
+width:80px;
+height:3px;
+background:#f5c542;
+margin-left:auto;
+margin-right:auto;
+border-radius:5px;
+"></div>
+
+</div>
+</div>
 /* TRUST BAR */
 .trust-bar{
 background:#111;
