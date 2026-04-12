@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bridge Travel Solutions | Dubai Travel Agency</title>
 
 <style>
@@ -18,12 +17,10 @@ color:white;
 nav{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:25px;
 padding:15px;
 background:#000;
 border-bottom:1px solid gold;
-position:sticky;
-top:0;
 }
 
 nav a{
@@ -57,15 +54,18 @@ position:relative;
 
 .hero img{
 width:180px;
+margin-bottom:10px;
 }
 
 .hero h1{
 color:gold;
-font-size:50px;
+font-size:48px;
+margin:10px 0;
 }
 
 .hero p{
 color:#ccc;
+font-size:16px;
 }
 
 .btn{
@@ -88,6 +88,8 @@ padding:60px 20px;
 
 h2{
 color:gold;
+text-align:center;
+margin-bottom:30px;
 }
 
 /* CARDS */
@@ -102,6 +104,20 @@ background:#111;
 padding:20px;
 border-radius:12px;
 border:1px solid #222;
+text-align:center;
+}
+
+.card h3{
+color:gold;
+}
+
+/* CTA STRIP */
+.cta{
+text-align:center;
+padding:40px 20px;
+background:#111;
+border-top:1px solid gold;
+border-bottom:1px solid gold;
 }
 
 /* FOOTER */
@@ -109,7 +125,6 @@ footer{
 text-align:center;
 padding:20px;
 color:#777;
-border-top:1px solid #222;
 }
 
 /* WHATSAPP */
@@ -128,7 +143,7 @@ text-decoration:none;
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -144,22 +159,39 @@ text-decoration:none;
 <img src="logo.png">
 
 <h1>Bridge Travel Solutions</h1>
-<p>Travel ✈️ | Jobs 🌍 | Study 🎓 | Dubai Based Agency</p>
+<p>Your trusted partner for Travel, Jobs & Study Abroad</p>
 
-<a class="btn" href="https://wa.me/971583017066">Start Now</a>
+<a class="btn" href="https://wa.me/971583017066">
+Start Your Journey
+</a>
 
 </div>
 </div>
 
-<!-- SERVICES PREVIEW -->
+<!-- SERVICES -->
 <div class="container">
-<h2>Our Core Services</h2>
+<h2>Our Services</h2>
 
 <div class="grid">
-<div class="card">✈️ Flights & Booking</div>
-<div class="card">🛂 Visa Assistance</div>
-<div class="card">🌍 Jobs Abroad</div>
-<div class="card">🎓 Study Abroad</div>
+<div class="card">
+<h3>✈️ Flight Booking</h3>
+<p>Affordable international flights with best routes and airlines.</p>
+</div>
+
+<div class="card">
+<h3>🛂 Visa Assistance</h3>
+<p>Complete visa support for travel, work and study abroad.</p>
+</div>
+
+<div class="card">
+<h3>🌍 Jobs Abroad</h3>
+<p>Access verified job opportunities and relocation guidance.</p>
+</div>
+
+<div class="card">
+<h3>🎓 Study Abroad</h3>
+<p>University applications, scholarships and student visas.</p>
+</div>
 </div>
 </div>
 
@@ -168,14 +200,21 @@ text-decoration:none;
 <h2>Why Choose Us</h2>
 
 <div class="grid">
-<div class="card">Trusted Dubai Agency</div>
-<div class="card">Fast Response</div>
-<div class="card">End-to-End Support</div>
+<div class="card">✔ Dubai Based Agency</div>
+<div class="card">✔ Trusted Global Network</div>
+<div class="card">✔ Fast Response</div>
+<div class="card">✔ End-to-End Support</div>
 </div>
 </div>
 
+<!-- CTA -->
+<div class="cta">
+<h2>Ready to Start Your Journey?</h2>
+<a class="btn" href="https://wa.me/971583017066">Contact Us on WhatsApp</a>
+</div>
+
 <footer>
-© 2026 Bridge Travel Solutions
+© 2026 Bridge Travel Solutions | Dubai UAE
 </footer>
 
 <a class="whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
