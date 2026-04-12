@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Our Services | Bridge Travel Solutions</title>
+<title>Gallery | Bridge Travel Solutions</title>
 
 <style>
 
@@ -37,53 +37,27 @@ nav a:hover{
 color:#f5c542;
 }
 
-/* HERO (FIXED + LIGHT BACKGROUND ADDED) */
+/* HERO */
 .hero{
 background:
 linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1529070538774-1843cb3265df') center/cover;
-position:relative;
-height:70vh;
+url('https://images.unsplash.com/photo-1488646953014-85cb44e25828') center/cover;
+height:60vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:850px;
-padding:20px;
-}
-
 .hero h1{
-color:#ffffff;
-font-size:58px;
-margin-bottom:10px;
-text-shadow:0 4px 20px rgba(0,0,0,0.7);
+font-size:52px;
+color:white;
+text-shadow:0 4px 20px rgba(0,0,0,0.6);
 }
 
 .hero p{
-color:#e6e6e6;
-font-size:18px;
-line-height:1.7;
-}
-
-/* TRUST BAR (UPDATED COLOR) */
-.trust-bar{
-margin:20px auto;
-max-width:1000px;
-padding:14px 20px;
-text-align:center;
-font-size:14px;
-color:#fff;
-
-background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
-border:1px solid rgba(245,197,66,0.3);
-
-border-radius:50px;
-box-shadow:0 8px 25px rgba(0,0,0,0.35);
+color:#ddd;
+margin-top:10px;
 }
 
 /* SECTION */
@@ -94,118 +68,121 @@ padding:60px 20px;
 }
 
 h2{
+text-align:center;
 color:#f5c542;
-text-align:center;
-margin-bottom:20px;
 font-size:32px;
+margin-bottom:10px;
 }
 
-p{
-color:#ccc;
+.sub{
 text-align:center;
-line-height:1.7;
-max-width:900px;
-margin:auto;
+color:#aaa;
+margin-bottom:40px;
 }
 
-/* GRID */
+/* GALLERY GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-margin-top:30px;
 }
 
-/* CARD */
 .card{
 position:relative;
 border-radius:14px;
 overflow:hidden;
-padding:25px;
-min-height:260px;
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-border:1px solid #222;
+height:220px;
 background-size:cover;
 background-position:center;
+transition:0.3s;
 }
 
-.card::before{
+.card:hover{
+transform:scale(1.03);
+}
+
+.card::after{
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.75);
+background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);
 }
 
-.card h3,.card p,.card a,.badge{
-position:relative;
-z-index:2;
-}
-
-.card h3{
-color:#f5c542;
-}
-
-.card p{
-color:#ddd;
-font-size:14px;
-}
-
-/* BADGE */
-.badge{
+.label{
 position:absolute;
-top:10px;
-right:10px;
-background:#f5c542;
-color:black;
-font-size:11px;
-padding:5px 10px;
-border-radius:20px;
-font-weight:bold;
+bottom:10px;
+left:10px;
+z-index:2;
+color:white;
+font-size:13px;
 }
 
-/* BUTTONS */
-.btn{
-display:inline-block;
-margin-top:10px;
-padding:10px 16px;
-border-radius:40px;
-text-decoration:none;
-font-weight:bold;
-font-size:12px;
-}
-
-.whatsapp{background:#25D366;color:white;}
-.email{background:#333;color:white;margin-left:8px;}
-
-/* TESTIMONIALS */
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-margin-top:30px;
-}
-
-.testimonial{
+/* STORIES */
+.story{
 background:#111;
 padding:20px;
 border-radius:12px;
 border:1px solid #222;
-color:#ccc;
+margin-top:20px;
 }
 
-.testimonial strong{
+.story strong{
 color:#f5c542;
+}
+
+/* SOCIAL */
+.social{
+text-align:center;
+margin-top:60px;
+padding:40px 20px;
+background:#0f0f0f;
+border-top:1px solid #222;
+}
+
+.icons{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:15px;
+}
+
+.icon{
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:#222;
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+.icon:hover{
+background:#f5c542;
+color:black;
 }
 
 /* CTA */
 .cta{
 text-align:center;
-padding:70px 20px;
+padding:60px 20px;
 background:#111;
-margin-top:50px;
+margin-top:40px;
 }
+
+.cta a{
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.whatsapp{background:#25D366;color:white;}
+.email{background:#333;color:white;margin-left:10px;}
 
 footer{
 text-align:center;
@@ -229,148 +206,88 @@ color:#777;
 
 <!-- HERO -->
 <div class="hero">
-<div class="hero-content">
-<h1>Our Services</h1>
-<p>
-We simplify travel, jobs, visas, and relocation processes with real guidance and step-by-step support until your journey is complete.
-</p>
+<div>
+<h1>Our Journey Gallery</h1>
+<p>Real travel moments, client journeys, and success stories</p>
 </div>
 </div>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-🌍 Based in Dubai 🇦🇪 • 📍 Ground Support in Malawi 🇲🇼 • 🤝 Real Human Step-by-Step Guidance
-</div>
-
-<!-- SERVICES -->
+<!-- GALLERY -->
 <div class="container">
 
-<h2>What We Offer</h2>
+<h2>Travel Moments</h2>
+<p class="sub">Snapshots of journeys, airports, visas, and destinations</p>
 
 <div class="grid">
 
 <div class="card" style="background-image:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df')">
-<div class="badge">POPULAR</div>
-<h3>Visa Assistance</h3>
-<p>Step-by-step visa guidance with document preparation and support.</p>
-<a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
-<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
+<div class="label">Visa Approval Journey</div>
 </div>
 
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d')">
-<div class="badge">HIGH DEMAND</div>
-<h3>Jobs Abroad</h3>
-<p>Verified job guidance and application support for international opportunities.</p>
-<a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
-<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828')">
+<div class="label">Airport Departure</div>
 </div>
 
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05')">
-<h3>Flight Booking</h3>
-<p>Affordable and smooth flight planning support.</p>
-<a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
-<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1502920917128-1aa500764b4f')">
+<div class="label">Dubai Arrival Experience</div>
 </div>
 
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')">
-<h3>Study Abroad</h3>
-<p>University applications and admission support.</p>
-<a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
-<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
-</div>
-
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70')">
-<h3>Airport Pick-up</h3>
-<p>Safe airport pickup service in Dubai.</p>
-<a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
-<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
-</div>
-
-<div class="card" style="background-image:url('https://images.unsplash.com/photo-1526779259212-939e64788e3c')">
-<h3>City Tours</h3>
-<p>Guided Dubai city experiences.</p>
-<a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
-<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1491553895911-0055eca6402d')">
+<div class="label">City Travel Moments</div>
 </div>
 
 </div>
+
 </div>
 
-<!-- HOW WE WORK (NEW UPGRADED VERSION ADDED) -->
+<!-- STORIES (SEPARATE FROM GALLERY) -->
 <div class="container">
 
-<h2>How We Work</h2>
+<h2>Client Stories</h2>
+<p class="sub">Real experiences from our clients</p>
 
-<p>Simple step-by-step process from contact to completion.</p>
-
-<div style="
-margin-top:40px;
-padding:60px 20px;
-border-radius:20px;
-background:
-linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-url('https://images.unsplash.com/photo-1529070538774-1843cb3265df') center/cover;
-">
-
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:15px;align-items:center;">
-
-<div style="background:rgba(17,17,17,0.85);padding:20px;width:220px;border-radius:12px;text-align:center;border:1px solid #222;">
-📩<br><strong style="color:#f5c542;">Step 1</strong>
-<p style="color:#ccc;font-size:14px;">Contact Us</p>
+<div class="story">
+<strong>Jacob – Malawi (March 2024)</strong><br>
+“I got full support from start to finish. My visa process became clear and I successfully traveled for work.”
 </div>
 
-<div style="color:#f5c542;font-size:24px;">➡️</div>
-
-<div style="background:rgba(17,17,17,0.85);padding:20px;width:220px;border-radius:12px;text-align:center;border:1px solid #222;">
-🎯<br><strong style="color:#f5c542;">Step 2</strong>
-<p style="color:#ccc;font-size:14px;">Share Goal</p>
+<div class="story">
+<strong>Alice – Zambia (July 2020)</strong><br>
+“My holiday planning was smooth and stress-free. Everything was handled professionally.”
 </div>
 
-<div style="color:#f5c542;font-size:24px;">➡️</div>
-
-<div style="background:rgba(17,17,17,0.85);padding:20px;width:220px;border-radius:12px;text-align:center;border:1px solid #222;">
-🧭<br><strong style="color:#f5c542;">Step 3</strong>
-<p style="color:#ccc;font-size:14px;">We Guide You</p>
-</div>
-
-<div style="color:#f5c542;font-size:24px;">➡️</div>
-
-<div style="background:rgba(17,17,17,0.85);padding:20px;width:220px;border-radius:12px;text-align:center;border:1px solid #222;">
-✈️<br><strong style="color:#f5c542;">Step 4</strong>
-<p style="color:#ccc;font-size:14px;">Success</p>
-</div>
-
-</div>
+<div class="story">
+<strong>Chris – Malawi (January 2026)</strong><br>
+“They guided me step-by-step until I secured my travel documents.”
 </div>
 
 </div>
 
-<!-- TESTIMONIALS -->
-<div class="container">
-<h2>What Clients Say</h2>
+<!-- SOCIAL -->
+<div class="social">
 
-<div class="testimonials">
+<h2>Follow Our Journey</h2>
+<p class="sub">Stay updated on real travel stories and opportunities</p>
 
-<div class="testimonial">
-“I got a job in Dubai after guidance.”<br><strong>Chikondi Banda</strong>
-</div>
+<div class="icons">
 
-<div class="testimonial">
-“My holiday was perfectly planned.”<br><strong>Thokozani Phiri</strong>
-</div>
+<!-- ACTIVE -->
+<a class="icon" href="https://www.tiktok.com/" target="_blank">🎵</a>
 
-<div class="testimonial">
-“My visa process became easy.”<br><strong>Blessings Mwale</strong>
-</div>
+<!-- PLACEHOLDERS -->
+<a class="icon" href="#">📸</a>
+<a class="icon" href="#">📘</a>
+<a class="icon" href="#">🐦</a>
 
 </div>
+
 </div>
 
 <!-- CTA -->
 <div class="cta">
 <h2>Start Your Journey Today</h2>
-<a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
-<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
+<a class="whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
+<a class="email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
 <footer>
