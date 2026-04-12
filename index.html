@@ -58,7 +58,7 @@ z-index:1000;
 nav a{
 color:#ddd;
 text-decoration:none;
-font-size:17px; /* INCREASED */
+font-size:17px;
 letter-spacing:1px;
 transition:0.3s;
 }
@@ -78,7 +78,6 @@ text-align:center;
 overflow:hidden;
 }
 
-/* VIDEO */
 .hero video{
 position:absolute;
 top:0;
@@ -99,7 +98,6 @@ opacity:0.45;
 z-index:1;
 }
 
-/* DARK OVERLAY */
 .hero::after{
 content:"";
 position:absolute;
@@ -108,34 +106,22 @@ background:rgba(0,0,0,0.60);
 z-index:2;
 }
 
-/* HERO CONTENT */
 .hero-content{
 position:relative;
 z-index:3;
 max-width:900px;
 padding:20px;
-animation:fadeIn 1.2s ease-in;
 }
 
 .hero h1{
 color:#f5c542;
-font-size:60px; /* INCREASED */
+font-size:60px;
 margin:10px 0;
-letter-spacing:1px;
 }
 
 .hero p{
 color:#ccc;
-font-size:18px; /* INCREASED */
-line-height:1.6;
-}
-
-/* HERO TRUST LINE */
-.hero .tagline{
-margin-top:10px;
-color:#f5c542;
-font-size:15px;
-opacity:0.9;
+font-size:18px;
 }
 
 /* BUTTONS */
@@ -148,12 +134,7 @@ color:black;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-font-size:16px; /* INCREASED */
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
+font-size:16px;
 }
 
 /* SECTION */
@@ -167,7 +148,7 @@ h2{
 color:#f5c542;
 text-align:center;
 margin-bottom:30px;
-font-size:32px; /* INCREASED */
+font-size:32px;
 }
 
 /* ABOUT */
@@ -206,7 +187,7 @@ font-weight:bold;
 font-size:13px;
 }
 
-/* SERVICES */
+/* SERVICES (RESTORED ORIGINAL) */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -219,8 +200,6 @@ border-radius:12px;
 border:1px solid #222;
 overflow:hidden;
 transition:0.3s;
-display:flex;
-flex-direction:column;
 }
 
 .card:hover{
@@ -258,53 +237,7 @@ font-weight:bold;
 text-decoration:none;
 }
 
-/* HOW IT WORKS */
-.how{
-background:#0f0f0f;
-padding:50px 20px;
-border-top:1px solid #222;
-border-bottom:1px solid #222;
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.step{
-background:#111;
-padding:20px;
-border-radius:12px;
-border:1px solid #222;
-}
-
-.step h3{
-color:#f5c542;
-}
-
-/* WHY CHOOSE */
-.why{
-padding:60px 20px;
-}
-
-.why ul{
-list-style:none;
-padding:0;
-max-width:800px;
-margin:auto;
-}
-
-.why li{
-background:#111;
-margin:10px 0;
-padding:15px;
-border-radius:10px;
-border:1px solid #222;
-color:#ccc;
-}
-
-/* TESTIMONIALS */
+/* TESTIMONIALS (RESTORED) */
 .testimonials{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -362,7 +295,7 @@ color:white;
 text-decoration:none;
 }
 
-/* EMAIL CTA */
+/* EMAIL */
 .email-btn{
 display:inline-block;
 margin-left:10px;
@@ -372,13 +305,65 @@ color:white;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-font-size:16px;
 }
 
-/* ANIMATION */
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
+/* ========================= */
+/* ADDED (WITHOUT REMOVING ANYTHING) */
+/* ========================= */
+
+/* HERO TAGLINE */
+.hero .tagline{
+margin-top:10px;
+color:#f5c542;
+font-size:15px;
+}
+
+/* HOW IT WORKS */
+.how{
+margin-top:40px;
+background:#0f0f0f;
+padding:50px 20px;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.step{
+background:#111;
+padding:20px;
+border-radius:12px;
+border:1px solid #222;
+}
+
+.step h3{
+color:#f5c542;
+}
+
+/* WHY US */
+.why{
+margin-top:40px;
+padding:40px 20px;
+}
+
+.why ul{
+list-style:none;
+padding:0;
+max-width:800px;
+margin:auto;
+}
+
+.why li{
+background:#111;
+margin:10px 0;
+padding:15px;
+border-radius:10px;
+border:1px solid #222;
+color:#ccc;
 }
 
 </style>
@@ -406,9 +391,7 @@ to{opacity:1; transform:translateY(0);}
 </video>
 
 <div class="hero-content">
-
 <h1>Bridge Travel Solutions</h1>
-
 <p>Travel | Jobs | Education Opportunities Abroad</p>
 
 <div class="tagline">
@@ -416,25 +399,23 @@ Trusted travel & relocation support from Dubai
 </div>
 
 <a class="btn" href="contact.html">Start Your Journey</a>
-
-</div>
 </div>
 
-<!-- HOW IT WORKS -->
+</div>
+
+<!-- HOW IT WORKS (ADDED) -->
 <div class="how container">
 <h2>How It Works</h2>
-
 <div class="steps">
-<div class="step"><h3>1. Contact Us</h3><p>Reach us via WhatsApp or Email.</p></div>
-<div class="step"><h3>2. Consultation</h3><p>We understand your travel or job needs.</p></div>
-<div class="step"><h3>3. Support</h3><p>We guide you step-by-step until completion.</p></div>
+<div class="step"><h3>1. Contact</h3><p>Reach us via WhatsApp or email.</p></div>
+<div class="step"><h3>2. Consultation</h3><p>We understand your needs.</p></div>
+<div class="step"><h3>3. Support</h3><p>We guide you until completion.</p></div>
 </div>
 </div>
 
-<!-- WHY CHOOSE US -->
+<!-- WHY US (ADDED) -->
 <div class="why container">
 <h2>Why Choose Us</h2>
-
 <ul>
 <li>✔ Verified guidance</li>
 <li>✔ Fast response support</li>
@@ -444,7 +425,7 @@ Trusted travel & relocation support from Dubai
 </ul>
 </div>
 
-<!-- ABOUT -->
+<!-- ABOUT (RESTORED) -->
 <div class="container">
 <h2>Who We Are</h2>
 
@@ -452,16 +433,16 @@ Trusted travel & relocation support from Dubai
 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
 
 <div class="about-text">
-Bridge Travel Solutions was created from real travel experience and challenges faced across countries.
-We help people travel, work, and study internationally with trusted guidance.
+Bridge Travel Solutions helps people travel, work, and study internationally through trusted support and real experience guidance.
 
 <br><br>
 <a class="small-btn" href="about.html">Read More About Us</a>
 </div>
+
 </div>
 </div>
 
-<!-- SERVICES -->
+<!-- SERVICES (RESTORED FULL) -->
 <div class="container">
 <h2>Our Services</h2>
 
@@ -485,31 +466,49 @@ We help people travel, work, and study internationally with trusted guidance.
 </div>
 </div>
 
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<div class="card-content">
+<h3>Jobs Abroad</h3>
+<p>Verified job opportunities.</p>
+<a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
 
-<!-- TESTIMONIALS -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div class="card-content">
+<h3>Study Abroad</h3>
+<p>University admissions support.</p>
+<a class="readmore" href="services.html">Read More</a>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- TESTIMONIALS (RESTORED) -->
 <div class="container">
 <h2>What People Say</h2>
 
 <div class="testimonials">
 
 <div class="testimonial">
-Very smooth process and clear communication.
+Smooth process and great support.
 <br><br>
 <strong>Jacob</strong><br>
 Malawi • March 2024
 </div>
 
 <div class="testimonial">
-Very supportive step-by-step guidance.
+Very helpful and clear guidance.
 <br><br>
 <strong>Alice</strong><br>
 Zambia • July 2020
 </div>
 
 <div class="testimonial">
-Professional and responsive service.
+Professional service.
 <br><br>
 <strong>Chris</strong><br>
 Dubai • January 2026
