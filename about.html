@@ -8,7 +8,6 @@
 
 <style>
 
-/* GLOBAL */
 body{
 margin:0;
 font-family:Arial;
@@ -47,8 +46,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-position:relative;
 background:url('https://images.unsplash.com/photo-1502920917128-1aa500764b4f') center/cover;
+position:relative;
 }
 
 .hero::after{
@@ -61,14 +60,14 @@ background:rgba(0,0,0,0.65);
 .hero-content{
 position:relative;
 z-index:2;
-max-width:800px;
+max-width:850px;
 padding:20px;
-animation:fadeIn 1s ease-in;
 }
 
 .hero h1{
 color:#f5c542;
 font-size:52px;
+margin-bottom:10px;
 }
 
 .hero p{
@@ -77,7 +76,7 @@ font-size:18px;
 line-height:1.6;
 }
 
-/* SECTION */
+/* CONTAINER */
 .container{
 max-width:1100px;
 margin:auto;
@@ -87,7 +86,7 @@ padding:70px 20px;
 h2{
 color:#f5c542;
 text-align:center;
-margin-bottom:20px;
+margin-bottom:25px;
 font-size:32px;
 }
 
@@ -100,31 +99,7 @@ max-width:900px;
 margin:auto;
 }
 
-/* IMAGE SECTIONS */
-.image-section{
-display:flex;
-flex-wrap:wrap;
-align-items:center;
-gap:30px;
-margin-top:40px;
-}
-
-.image-section img{
-width:100%;
-max-width:500px;
-border-radius:14px;
-transition:0.4s;
-}
-
-.image-section img:hover{
-transform:scale(1.03);
-}
-
-.image-text{
-flex:1;
-}
-
-/* CARDS */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -138,9 +113,7 @@ padding:25px;
 border-radius:14px;
 border:1px solid #222;
 text-align:center;
-transition:0.4s;
-opacity:0;
-transform:translateY(30px);
+transition:0.3s;
 }
 
 .card:hover{
@@ -150,6 +123,25 @@ border-color:#f5c542;
 
 .card h3{
 color:#f5c542;
+}
+
+/* IMAGE SECTION */
+.image-section{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:30px;
+margin-top:40px;
+}
+
+.image-section img{
+width:100%;
+max-width:500px;
+border-radius:14px;
+}
+
+.image-text{
+flex:1;
 }
 
 /* CTA */
@@ -169,31 +161,21 @@ border-radius:50px;
 text-decoration:none;
 font-weight:bold;
 margin-top:20px;
-transition:0.3s;
+margin-right:10px;
 }
 
-.btn:hover{
-transform:scale(1.05);
+.email-btn{
+display:inline-block;
+padding:15px 30px;
+background:#333;
+color:white;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+margin-top:20px;
 }
 
-/* ANIMATION */
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-/* SCROLL ANIMATION */
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:all 0.8s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -219,56 +201,68 @@ color:#777;
 <div class="hero-content">
 <h1>About Bridge Travel Solutions</h1>
 <p>
-A trusted travel and relocation support platform based in Dubai, guiding people from Africa and beyond to global opportunities.
+A trusted travel and relocation support platform based in Dubai with ground presence in Malawi, helping people access global opportunities through real guidance and experience.
 </p>
 </div>
 </div>
 
 <!-- STORY -->
-<div class="container reveal">
+<div class="container">
 <h2>Our Story</h2>
 
 <div class="image-section">
+
 <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df">
 
 <div class="image-text">
 <p>
-Bridge Travel Solutions was founded by an African traveler who experienced firsthand the challenges of moving across countries in search of better opportunities. From visa processes to job hunting and travel systems, the journey was not easy — and it revealed a bigger problem: many people lack trusted guidance.
+Bridge Travel Solutions was founded by an African traveler who personally experienced the challenges of moving abroad in search of better opportunities. From visa processes to job searching and adapting to new systems, the journey revealed how many people struggle without proper guidance.
 
-What started as personal experience helping others informally has now grown into a structured support platform based in Dubai. Today, we exist to simplify travel, study, and work abroad through real experience and honest guidance.
+What began as informal help to others has now grown into a structured support platform based in Dubai, with active ground support in Malawi. Our purpose is simple — to make international travel, work, and study more accessible, clear, and trustworthy.
 </p>
 </div>
 
 </div>
+
 </div>
 
-<!-- MISSION -->
-<div class="container reveal">
+<!-- MISSION & VISION -->
+<div class="container">
+
 <h2>Mission & Vision</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Our Mission</h3>
-<p>To provide honest, step-by-step guidance that helps people access global opportunities safely and confidently.</p>
+<p>
+To provide honest, practical, and step-by-step guidance that helps people access global opportunities safely and confidently.
+</p>
 </div>
 
 <div class="card">
 <h3>Our Vision</h3>
-<p>To become a trusted global bridge connecting individuals to life-changing opportunities worldwide.</p>
+<p>
+To become a trusted global bridge connecting individuals to life-changing opportunities worldwide.
+</p>
 </div>
 
 </div>
+
 </div>
 
-<!-- IMAGE BREAK -->
-<div class="container reveal">
+<!-- WHERE WE ARE -->
+<div class="container">
+
+<h2>Where We Are Based</h2>
 
 <div class="image-section">
+
 <div class="image-text">
-<h2>Based in Dubai 🇦🇪</h2>
 <p>
-Operating from Dubai gives us direct access to global travel networks, allowing us to better support clients across Africa, the Middle East, and beyond.
+We are proudly based in Dubai 🇦🇪, giving us direct access to global travel systems and international opportunities.
+
+We also operate with ground support in Malawi 🇲🇼, ensuring we stay connected to clients on the ground and provide real, accessible support where it matters most.
 </p>
 </div>
 
@@ -279,57 +273,62 @@ Operating from Dubai gives us direct access to global travel networks, allowing 
 </div>
 
 <!-- VALUES -->
-<div class="container reveal">
+<div class="container">
+
 <h2>Our Values</h2>
 
 <div class="grid">
 
-<div class="card"><h3>Trust</h3><p>Honesty in every interaction.</p></div>
-<div class="card"><h3>Support</h3><p>We guide you step-by-step.</p></div>
-<div class="card"><h3>Reliability</h3><p>Consistent and dependable help.</p></div>
-<div class="card"><h3>Clarity</h3><p>No confusion, only clear guidance.</p></div>
+<div class="card">
+<h3>Trust</h3>
+<p>We operate with honesty and transparency at every step.</p>
+</div>
+
+<div class="card">
+<h3>Support</h3>
+<p>We guide clients throughout their entire journey.</p>
+</div>
+
+<div class="card">
+<h3>Reliability</h3>
+<p>We deliver consistent and dependable assistance.</p>
+</div>
+
+<div class="card">
+<h3>Clarity</h3>
+<p>We ensure clear and simple guidance at all times.</p>
+</div>
 
 </div>
+
 </div>
 
 <!-- HOW WE WORK -->
-<div class="container reveal">
+<div class="container">
+
 <h2>How We Work</h2>
 
 <p>
-We begin by understanding your goal, then identify the best pathway, guide you through preparation, and support you until your journey is complete. Every step is designed to keep things simple, clear, and stress-free.
+We start by understanding your goal, identify the best pathway, guide you through each requirement, and support you until your journey is complete. Our process is simple, structured, and focused on making everything stress-free and clear.
 </p>
 
 </div>
 
 <!-- CTA -->
-<div class="cta reveal">
+<div class="cta">
+
 <h2>Start Your Journey With Confidence</h2>
+
 <p>Speak to us today and let us guide you personally.</p>
 
 <a class="btn" href="https://wa.me/971583017066">WhatsApp Us</a>
-<a class="btn" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email Us</a>
+<a class="email-btn" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email Us</a>
+
 </div>
 
 <footer>
 © 2026 Bridge Travel Solutions | Dubai UAE
 </footer>
-
-<!-- SCROLL ANIMATION SCRIPT -->
-<script>
-window.addEventListener("scroll", function(){
-let reveals = document.querySelectorAll(".reveal");
-for(let i=0;i<reveals.length;i++){
-let windowHeight = window.innerHeight;
-let elementTop = reveals[i].getBoundingClientRect().top;
-let elementVisible = 100;
-
-if(elementTop < windowHeight - elementVisible){
-reveals[i].classList.add("active");
-}
-}
-});
-</script>
 
 </body>
 </html>
