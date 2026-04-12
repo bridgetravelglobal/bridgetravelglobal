@@ -83,6 +83,24 @@ text-decoration:none;
 font-weight:bold;
 }
 
+/* TRUST NUMBERS */
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:25px;
+color:#aaa;
+font-size:13px;
+}
+
+.stat{
+border:1px solid #222;
+padding:10px 15px;
+border-radius:10px;
+background:#111;
+}
+
 /* SECTION */
 .container{
 max-width:1100px;
@@ -96,24 +114,39 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* ABOUT */
-.about{
-background:#111;
-padding:25px;
-border-radius:12px;
-border:1px solid #222;
-line-height:1.7;
-color:#ccc;
-}
-
-/* TRUST STRIP */
-.trust{
+/* ABOUT BLOCK */
+.about-wrap{
 display:flex;
 flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:20px;
-color:#aaa;
+gap:20px;
+align-items:center;
+background:#111;
+padding:20px;
+border-radius:12px;
+border:1px solid #222;
+}
+
+.about-wrap img{
+width:100%;
+max-width:400px;
+border-radius:10px;
+}
+
+.about-text{
+flex:1;
+color:#ccc;
+line-height:1.7;
+}
+
+.small-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:gold;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
 font-size:13px;
 }
 
@@ -126,32 +159,30 @@ gap:20px;
 
 .card{
 background:#111;
-padding:20px;
 border-radius:12px;
 border:1px solid #222;
-text-align:left;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
 }
 
 .card h3{
 color:gold;
+margin-top:0;
 }
 
 .card p{
 color:#ccc;
-line-height:1.5;
 font-size:14px;
-}
-
-.small-btn{
-display:inline-block;
-margin-top:10px;
-color:black;
-background:gold;
-padding:8px 14px;
-border-radius:30px;
-text-decoration:none;
-font-size:13px;
-font-weight:bold;
+line-height:1.5;
 }
 
 /* CTA */
@@ -163,12 +194,14 @@ border-top:1px solid gold;
 border-bottom:1px solid gold;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
 color:#777;
 }
 
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -202,16 +235,17 @@ text-decoration:none;
 <h1>Bridge Travel Solutions</h1>
 
 <p>
-We help individuals access global travel, job opportunities, and education pathways with guided support from start to finish.
+We connect people to global travel, jobs, and education opportunities through trusted guidance and end-to-end support.
 </p>
 
 <a class="btn" href="contact.html">Start Your Journey</a>
 
-<div class="trust">
-<span>✔ Dubai-Based Support</span>
-<span>✔ Global Travel Guidance</span>
-<span>✔ Job & Study Assistance</span>
-<span>✔ Fast Response Service</span>
+<!-- TRUST NUMBERS -->
+<div class="stats">
+<div class="stat">✔ 100+ Clients Assisted</div>
+<div class="stat">✔ Global Travel Support</div>
+<div class="stat">✔ Visa & Job Guidance</div>
+<div class="stat">✔ Fast Response Service</div>
 </div>
 
 </div>
@@ -219,45 +253,78 @@ We help individuals access global travel, job opportunities, and education pathw
 
 <!-- ABOUT -->
 <div class="container">
-<h2>Who We Are</h2>
+<h2>About Us</h2>
 
-<div class="about">
-Bridge Travel Solutions was created from real travel experience and understanding of how difficult it can be to navigate international opportunities.
-The founder experienced challenges moving across countries and accessing reliable information, which inspired the creation of a support system for others.
-Today, we guide people through travel arrangements, visa processes, job opportunities abroad, and study pathways.
-Our goal is to simplify global access and provide clear, honest, and practical support.
-We believe that opportunity should not be complicated, and we exist to make the process easier for individuals and families.
+<div class="about-wrap">
+
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+
+<div class="about-text">
+Bridge Travel Solutions was created from real-life travel experience and the challenges faced when moving across countries.
+The founder, an African traveler, experienced firsthand the difficulties of accessing reliable information, visa guidance, and job opportunities abroad.
+This inspired the creation of a support system that helps others travel, work, and study internationally with confidence.
+We provide clear guidance, trusted connections, and step-by-step assistance.
+Our mission is to simplify global opportunities and make them accessible to everyone.
+<br><br>
+
+<a class="small-btn" href="about.html">Read More About Us</a>
+</div>
+
 </div>
 </div>
 
-<!-- SERVICES PREVIEW -->
+<!-- SERVICES -->
 <div class="container">
-<h2>What We Offer</h2>
+<h2>Our Services</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>✈️ Flights & Travel</h3>
-<p>We assist with flight bookings and travel planning for individuals and groups worldwide.</p>
-<a class="small-btn" href="services.html">Read More</a>
+<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05">
+<div class="card-content">
+<h3>Flight Booking</h3>
+<p>Affordable international flights with flexible travel options.</p>
+</div>
 </div>
 
 <div class="card">
-<h3>🛂 Visa Support</h3>
-<p>Guidance for travel, work, and study visa applications with step-by-step support.</p>
-<a class="small-btn" href="services.html">Read More</a>
+<img src="https://images.unsplash.com/photo-1508780709619-79562169bc64">
+<div class="card-content">
+<h3>Visa Assistance</h3>
+<p>Full support for travel, work, and study visa applications.</p>
+</div>
 </div>
 
 <div class="card">
-<h3>🌍 Jobs Abroad</h3>
-<p>We connect people to verified job opportunities and support relocation processes.</p>
-<a class="small-btn" href="services.html">Read More</a>
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<div class="card-content">
+<h3>Jobs Abroad</h3>
+<p>Verified job opportunities and relocation guidance.</p>
+</div>
 </div>
 
 <div class="card">
-<h3>🎓 Study Abroad</h3>
-<p>Assistance with university applications, admissions, and student visa processes.</p>
-<a class="small-btn" href="services.html">Read More</a>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<div class="card-content">
+<h3>Study Abroad</h3>
+<p>University admissions, scholarships, and student visas.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<div class="card-content">
+<h3>Airport Pick-up</h3>
+<p>Safe and reliable airport transfer services in Dubai.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
+<div class="card-content">
+<h3>City Tours</h3>
+<p>Guided Dubai tours and customized travel experiences.</p>
+</div>
 </div>
 
 </div>
@@ -265,8 +332,8 @@ We believe that opportunity should not be complicated, and we exist to make the 
 
 <!-- CTA -->
 <div class="cta">
-<h2>Ready to Move Forward?</h2>
-<p style="color:#ccc;">Let’s help you take the next step toward travel, work, or study abroad.</p>
+<h2>Ready to Start Your Journey?</h2>
+<p style="color:#ccc;">Let’s help you move, travel, and grow globally with confidence.</p>
 <a class="btn" href="contact.html">Contact Us on WhatsApp</a>
 </div>
 
