@@ -36,7 +36,7 @@ background:#050505;
 }
 
 .brand-strip img{
-width:150px; /* 🔥 increased logo size */
+width:150px;
 opacity:0.98;
 }
 
@@ -58,7 +58,7 @@ z-index:1000;
 nav a{
 color:#ddd;
 text-decoration:none;
-font-size:16px; /* 🔥 increased font size */
+font-size:17px; /* INCREASED */
 letter-spacing:1px;
 transition:0.3s;
 }
@@ -89,13 +89,13 @@ object-fit:cover;
 z-index:0;
 }
 
-/* AIRPORT IMAGE (LIGHTER NOW) */
+/* AIRPORT IMAGE */
 .hero::before{
 content:"";
 position:absolute;
 inset:0;
 background:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df') center/cover;
-opacity:0.45; /* 🔥 brighter than before */
+opacity:0.45;
 z-index:1;
 }
 
@@ -119,89 +119,41 @@ animation:fadeIn 1.2s ease-in;
 
 .hero h1{
 color:#f5c542;
-font-size:52px;
+font-size:60px; /* INCREASED */
 margin:10px 0;
 letter-spacing:1px;
 }
 
 .hero p{
 color:#ccc;
-font-size:16px;
+font-size:18px; /* INCREASED */
 line-height:1.6;
 }
 
+/* HERO TRUST LINE */
+.hero .tagline{
+margin-top:10px;
+color:#f5c542;
+font-size:15px;
+opacity:0.9;
+}
+
+/* BUTTONS */
 .btn{
 display:inline-block;
 margin-top:20px;
-padding:14px 28px;
+padding:16px 34px;
 background:#f5c542;
 color:black;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
+font-size:16px; /* INCREASED */
 transition:0.3s;
 }
 
 .btn:hover{
 transform:scale(1.05);
-}
-
-/* STATS SECTION */
-.stats-section{
-background:url('https://images.unsplash.com/photo-1526779259212-939e64788e3c') center/cover;
-padding:80px 20px;
-text-align:center;
-position:relative;
-}
-
-/* 🔥 LIGHTER BACKGROUND */
-.stats-section::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.70);
-}
-
-.stats-content{
-position:relative;
-max-width:1000px;
-margin:auto;
-}
-
-.stats-section h2{
-color:#f5c542;
-font-size:28px;
-opacity:1;
-margin-bottom:5px;
-}
-
-.stats-section p{
-color:#ccc;
-margin-top:0;
-}
-
-.stats{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-margin-top:20px;
-}
-
-.stat{
-background:rgba(255,255,255,0.05);
-border:1px solid #333;
-padding:20px 25px;
-border-radius:12px;
-font-size:18px;
-font-weight:bold;
-color:#f5c542;
-min-width:180px;
-transition:0.3s;
-}
-
-.stat:hover{
-transform:translateY(-5px);
 }
 
 /* SECTION */
@@ -215,6 +167,7 @@ h2{
 color:#f5c542;
 text-align:center;
 margin-bottom:30px;
+font-size:32px; /* INCREASED */
 }
 
 /* ABOUT */
@@ -258,7 +211,6 @@ font-size:13px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
-align-items:stretch;
 }
 
 .card{
@@ -283,21 +235,15 @@ object-fit:cover;
 
 .card-content{
 padding:15px;
-flex:1;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
 }
 
 .card h3{
 color:#f5c542;
-margin:0;
 }
 
 .card p{
 color:#ccc;
 font-size:14px;
-line-height:1.5;
 }
 
 .readmore{
@@ -310,6 +256,52 @@ border-radius:20px;
 font-size:12px;
 font-weight:bold;
 text-decoration:none;
+}
+
+/* HOW IT WORKS */
+.how{
+background:#0f0f0f;
+padding:50px 20px;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.step{
+background:#111;
+padding:20px;
+border-radius:12px;
+border:1px solid #222;
+}
+
+.step h3{
+color:#f5c542;
+}
+
+/* WHY CHOOSE */
+.why{
+padding:60px 20px;
+}
+
+.why ul{
+list-style:none;
+padding:0;
+max-width:800px;
+margin:auto;
+}
+
+.why li{
+background:#111;
+margin:10px 0;
+padding:15px;
+border-radius:10px;
+border:1px solid #222;
+color:#ccc;
 }
 
 /* TESTIMONIALS */
@@ -325,7 +317,6 @@ padding:20px;
 border-radius:12px;
 border:1px solid #222;
 color:#ccc;
-line-height:1.6;
 position:relative;
 }
 
@@ -371,6 +362,19 @@ color:white;
 text-decoration:none;
 }
 
+/* EMAIL CTA */
+.email-btn{
+display:inline-block;
+margin-left:10px;
+padding:16px 34px;
+background:#333;
+color:white;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+}
+
 /* ANIMATION */
 @keyframes fadeIn{
 from{opacity:0; transform:translateY(20px);}
@@ -382,12 +386,10 @@ to{opacity:1; transform:translateY(0);}
 
 <body>
 
-<!-- TOP LOGO -->
 <div class="brand-strip">
 <img src="logo.png">
 </div>
 
-<!-- NAV -->
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -409,27 +411,37 @@ to{opacity:1; transform:translateY(0);}
 
 <p>Travel | Jobs | Education Opportunities Abroad</p>
 
+<div class="tagline">
+Trusted travel & relocation support from Dubai
+</div>
+
 <a class="btn" href="contact.html">Start Your Journey</a>
 
 </div>
 </div>
 
-<!-- STATS -->
-<div class="stats-section">
+<!-- HOW IT WORKS -->
+<div class="how container">
+<h2>How It Works</h2>
 
-<div class="stats-content">
-
-<h2>Trusted by Clients Across Borders</h2>
-<p>Real support. Real results. Real journeys.</p>
-
-<div class="stats">
-<div class="stat">50+ Clients Assisted</div>
-<div class="stat">Visa Support</div>
-<div class="stat">Job Abroad Guidance</div>
-<div class="stat">Study Support</div>
+<div class="steps">
+<div class="step"><h3>1. Contact Us</h3><p>Reach us via WhatsApp or Email.</p></div>
+<div class="step"><h3>2. Consultation</h3><p>We understand your travel or job needs.</p></div>
+<div class="step"><h3>3. Support</h3><p>We guide you step-by-step until completion.</p></div>
+</div>
 </div>
 
-</div>
+<!-- WHY CHOOSE US -->
+<div class="why container">
+<h2>Why Choose Us</h2>
+
+<ul>
+<li>✔ Verified guidance</li>
+<li>✔ Fast response support</li>
+<li>✔ End-to-end assistance</li>
+<li>✔ Based in Dubai</li>
+<li>✔ Real client experience approach</li>
+</ul>
 </div>
 
 <!-- ABOUT -->
@@ -437,20 +449,15 @@ to{opacity:1; transform:translateY(0);}
 <h2>Who We Are</h2>
 
 <div class="about-wrap">
-
 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
 
 <div class="about-text">
 Bridge Travel Solutions was created from real travel experience and challenges faced across countries.
-The founder, an African traveler, experienced difficulties accessing reliable travel and job opportunities abroad.
-
-We now help people travel, work, and study internationally through trusted guidance and support.
+We help people travel, work, and study internationally with trusted guidance.
 
 <br><br>
-
 <a class="small-btn" href="about.html">Read More About Us</a>
 </div>
-
 </div>
 </div>
 
@@ -464,7 +471,7 @@ We now help people travel, work, and study internationally through trusted guida
 <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05">
 <div class="card-content">
 <h3>Flight Booking</h3>
-<p>Affordable international flights with flexible options.</p>
+<p>Affordable international flights.</p>
 <a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
@@ -473,43 +480,7 @@ We now help people travel, work, and study internationally through trusted guida
 <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64">
 <div class="card-content">
 <h3>Visa Assistance</h3>
-<p>Full support for travel, work, and study visas.</p>
-<a class="readmore" href="services.html">Read More</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-<div class="card-content">
-<h3>Jobs Abroad</h3>
-<p>Verified international job opportunities.</p>
-<a class="readmore" href="services.html">Read More</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div class="card-content">
-<h3>Study Abroad</h3>
-<p>University admissions and student visa help.</p>
-<a class="readmore" href="services.html">Read More</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-<div class="card-content">
-<h3>Airport Pick-up</h3>
-<p>Safe arrival support in Dubai.</p>
-<a class="readmore" href="services.html">Read More</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
-<div class="card-content">
-<h3>City Tours</h3>
-<p>Dubai guided tours and travel experiences.</p>
+<p>Travel, work & study visa help.</p>
 <a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
@@ -524,21 +495,21 @@ We now help people travel, work, and study internationally through trusted guida
 <div class="testimonials">
 
 <div class="testimonial">
-Very smooth process and clear communication from start to finish.
+Very smooth process and clear communication.
 <br><br>
 <strong>Jacob</strong><br>
 Malawi • March 2024
 </div>
 
 <div class="testimonial">
-They helped me understand everything step by step. Very supportive.
+Very supportive step-by-step guidance.
 <br><br>
 <strong>Alice</strong><br>
 Zambia • July 2020
 </div>
 
 <div class="testimonial">
-Professional service and very responsive team.
+Professional and responsive service.
 <br><br>
 <strong>Chris</strong><br>
 Dubai • January 2026
@@ -549,9 +520,12 @@ Dubai • January 2026
 
 <!-- CTA -->
 <div class="cta">
-<h2>Ready to Start Your Journey?</h2>
-<p style="color:#ccc;">Let’s help you move, travel, and grow globally with confidence.</p>
-<a class="btn" href="contact.html">Contact Us on WhatsApp</a>
+<h2>Start Your Journey Today</h2>
+
+<p style="color:#ccc;">We respond fast and guide you personally.</p>
+
+<a class="btn" href="contact.html">WhatsApp Us</a>
+<a class="email-btn" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email Us</a>
 </div>
 
 <footer>
