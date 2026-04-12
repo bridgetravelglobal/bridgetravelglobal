@@ -64,6 +64,20 @@ max-width:700px;
 margin:auto;
 }
 
+/* TRUST BAR */
+.trust-bar{
+margin:20px auto;
+max-width:1000px;
+padding:14px 20px;
+text-align:center;
+font-size:14px;
+color:#fff;
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+border:1px solid rgba(245,197,66,0.3);
+border-radius:50px;
+box-shadow:0 8px 25px rgba(0,0,0,0.35);
+}
+
 /* SECTION */
 .container{
 max-width:1100px;
@@ -81,10 +95,57 @@ font-size:32px;
 text-align:center;
 color:#aaa;
 margin-top:10px;
-margin-bottom:40px;
+margin-bottom:20px;
 }
 
-/* VISA CARDS */
+/* NEW PREMIUM STRIP */
+.portfolio-strip{
+margin-top:30px;
+height:240px;
+border-radius:16px;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+border:1px solid #222;
+position:relative;
+overflow:hidden;
+}
+
+/* SUBTLE ANIMATION OVERLAY */
+.portfolio-strip::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(255,255,255,0.03);
+}
+
+/* COUNTER */
+.counter{
+font-size:52px;
+font-weight:bold;
+color:#f5c542;
+z-index:2;
+position:relative;
+animation:fadeUp 1.2s ease;
+}
+
+.counter small{
+display:block;
+font-size:14px;
+color:#ccc;
+margin-top:5px;
+}
+
+@keyframes fadeUp{
+from{transform:translateY(20px);opacity:0;}
+to{transform:translateY(0);opacity:1;}
+}
+
+/* VISA GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -105,12 +166,30 @@ transition:0.3s;
 transform:scale(1.03);
 }
 
+/* VISA STAMP EFFECT */
+.card::before{
+content:"APPROVED";
+position:absolute;
+top:15px;
+left:15px;
+font-size:12px;
+padding:6px 10px;
+background:rgba(245,197,66,0.9);
+color:black;
+font-weight:bold;
+border-radius:20px;
+z-index:3;
+transform:rotate(-5deg);
+}
+
+/* DARK OVERLAY */
 .overlay{
 position:absolute;
 inset:0;
 background:linear-gradient(to top,rgba(0,0,0,0.85),transparent);
 }
 
+/* CONTENT */
 .card-content{
 position:absolute;
 bottom:15px;
@@ -129,21 +208,7 @@ color:#ddd;
 margin-top:5px;
 }
 
-/* BADGES */
-.badge{
-position:absolute;
-top:10px;
-right:10px;
-background:#f5c542;
-color:black;
-font-size:11px;
-padding:5px 10px;
-border-radius:20px;
-font-weight:bold;
-z-index:2;
-}
-
-/* STORY SECTION */
+/* STORY */
 .story{
 background:#111;
 border:1px solid #222;
@@ -170,17 +235,10 @@ border-radius:12px;
 border:1px solid #222;
 }
 
-.before{
-background:#1a1a1a;
-}
+.before{background:#1a1a1a;}
+.after{background:#0f1f14;}
 
-.after{
-background:#0f1f14;
-}
-
-.box h3{
-color:#f5c542;
-}
+.box h3{color:#f5c542;}
 
 /* SOCIAL */
 .social{
@@ -237,6 +295,24 @@ margin:5px;
 .whatsapp{background:#25D366;color:white;}
 .email{background:#333;color:white;}
 
+/* FLOATING WHATSAPP */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+z-index:999;
+}
+
 footer{
 text-align:center;
 padding:20px;
@@ -265,20 +341,29 @@ color:#777;
 </div>
 </div>
 
+<!-- TRUST BAR -->
+<div class="trust-bar">
+🌍 Based in Dubai 🇦🇪 • 📍 Malawi Support 🇲🇼 • 🤝 Real Human Guidance
+</div>
+
 <!-- INTRO -->
 <div class="container">
 
 <h2>Real Visa Success Stories</h2>
-<p class="sub">
-Every case below represents real support, real guidance, and real travel outcomes.
-</p>
+<p class="sub">Every case below represents real support, real guidance, and real travel outcomes.</p>
+
+<!-- PREMIUM STRIP + COUNTER -->
+<div class="portfolio-strip">
+<div class="counter" id="counter">0
+<small>Visas Successfully Approved</small>
+</div>
+</div>
 
 <!-- VISA GRID -->
 <div class="grid">
 
 <div class="card" style="background-image:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df')">
 <div class="overlay"></div>
-<div class="badge">Approved</div>
 <div class="card-content">
 <h3>Work Visa</h3>
 <p>Dubai – Skilled Worker Approval</p>
@@ -287,7 +372,6 @@ Every case below represents real support, real guidance, and real travel outcome
 
 <div class="card" style="background-image:url('https://images.unsplash.com/photo-1502920917128-1aa500764b4f')">
 <div class="overlay"></div>
-<div class="badge">Approved</div>
 <div class="card-content">
 <h3>Tourist Visa</h3>
 <p>UK – Short Stay Visit</p>
@@ -296,7 +380,6 @@ Every case below represents real support, real guidance, and real travel outcome
 
 <div class="card" style="background-image:url('https://images.unsplash.com/photo-1488646953014-85cb44e25828')">
 <div class="overlay"></div>
-<div class="badge">Approved</div>
 <div class="card-content">
 <h3>Study Visa</h3>
 <p>Canada – Student Pathway</p>
@@ -305,33 +388,12 @@ Every case below represents real support, real guidance, and real travel outcome
 
 <div class="card" style="background-image:url('https://images.unsplash.com/photo-1491553895911-0055eca6402d')">
 <div class="overlay"></div>
-<div class="badge">Approved</div>
 <div class="card-content">
 <h3>Schengen Visa</h3>
 <p>Europe Travel Access</p>
 </div>
 </div>
 
-</div>
-
-<!-- BEFORE / AFTER -->
-<div class="container">
-
-<h2>Journey Transformation</h2>
-
-<div class="before-after">
-
-<div class="box before">
-<h3>Before</h3>
-<p>Confused about documents, visa process unclear, no direction.</p>
-</div>
-
-<div class="box after">
-<h3>After</h3>
-<p>Step-by-step guidance, clear process, successful travel outcome.</p>
-</div>
-
-</div>
 </div>
 
 <!-- STORIES -->
@@ -341,17 +403,17 @@ Every case below represents real support, real guidance, and real travel outcome
 
 <div class="story">
 <strong>Jacob – Malawi (2024)</strong><br>
-Got full support for work visa processing and successfully traveled to Dubai.
+Successful work visa approval with full guidance.
 </div>
 
 <div class="story">
 <strong>Alice – Zambia (2020)</strong><br>
-Holiday visa processed smoothly with full guidance from start to finish.
+Smooth travel and holiday visa support.
 </div>
 
 <div class="story">
 <strong>Chris – Malawi (2026)</strong><br>
-Step-by-step support helped complete documentation successfully.
+Step-by-step document assistance until approval.
 </div>
 
 </div>
@@ -363,13 +425,12 @@ Step-by-step support helped complete documentation successfully.
 
 <div class="icons">
 
-<a class="icon" href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+<a class="icon" href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
 <a class="icon" href="#"><i class="fa-brands fa-instagram"></i></a>
 <a class="icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
 <a class="icon" href="#"><i class="fa-brands fa-x-twitter"></i></a>
 
 </div>
-
 </div>
 
 <!-- CTA -->
@@ -383,3 +444,23 @@ Step-by-step support helped complete documentation successfully.
 © 2026 Bridge Travel Solutions | Dubai UAE
 </footer>
 
+<!-- FLOAT BUTTON -->
+<a class="float" href="https://wa.me/971583017066">💬</a>
+
+<!-- COUNTER SCRIPT -->
+<script>
+let count = 0;
+let target = 50;
+let el = document.getElementById("counter");
+
+let interval = setInterval(() => {
+count++;
+el.innerHTML = count + "<small>Visas Successfully Approved</small>";
+if(count >= target){
+clearInterval(interval);
+}
+}, 40);
+</script>
+
+</body>
+</html>
