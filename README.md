@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bridge Travel Solutions | Dubai Travel Agency</title>
+
+<title>Bridge Travel Solutions | Travel, Jobs & Study Abroad</title>
 
 <style>
 body{
@@ -21,6 +22,8 @@ gap:25px;
 padding:15px;
 background:#000;
 border-bottom:1px solid gold;
+position:sticky;
+top:0;
 }
 
 nav a{
@@ -46,19 +49,27 @@ inset:0;
 background:rgba(0,0,0,0.75);
 }
 
-.hero-content{position:relative;}
+.hero-content{
+position:relative;
+max-width:900px;
+margin:auto;
+}
 
 .hero img{
-width:180px;
+width:170px;
+margin-bottom:10px;
 }
 
 .hero h1{
 color:gold;
 font-size:48px;
+margin:10px 0;
 }
 
 .hero p{
 color:#ccc;
+font-size:16px;
+line-height:1.6;
 }
 
 .btn{
@@ -85,7 +96,28 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* GRID */
+/* ABOUT */
+.about{
+background:#111;
+padding:25px;
+border-radius:12px;
+border:1px solid #222;
+line-height:1.7;
+color:#ccc;
+}
+
+/* TRUST STRIP */
+.trust{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+color:#aaa;
+font-size:13px;
+}
+
+/* SERVICES */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -97,33 +129,46 @@ background:#111;
 padding:20px;
 border-radius:12px;
 border:1px solid #222;
-text-align:center;
+text-align:left;
 }
 
-.card h3{color:gold;}
+.card h3{
+color:gold;
+}
 
-p{
+.card p{
 color:#ccc;
-line-height:1.6;
+line-height:1.5;
+font-size:14px;
+}
+
+.small-btn{
+display:inline-block;
+margin-top:10px;
+color:black;
+background:gold;
+padding:8px 14px;
+border-radius:30px;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
 }
 
 /* CTA */
 .cta{
 text-align:center;
-padding:40px;
+padding:50px 20px;
 background:#111;
 border-top:1px solid gold;
 border-bottom:1px solid gold;
 }
 
-/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
 color:#777;
 }
 
-/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -155,78 +200,74 @@ text-decoration:none;
 <img src="logo.png">
 
 <h1>Bridge Travel Solutions</h1>
-<p>Your trusted partner for Travel, Jobs & Study Abroad</p>
-
-<a class="btn" href="https://wa.me/971583017066">Start Your Journey</a>
-
-</div>
-</div>
-
-<!-- ABOUT PREVIEW -->
-<div class="container">
-<h2>About Us</h2>
 
 <p>
-Bridge Travel Solutions was founded with a simple but powerful vision — to make global travel and opportunities accessible to everyone. The company was started by an African traveler who experienced the challenges of moving across countries and understanding new systems. Through real-life experience, he saw how difficult it can be to find the right information, trusted support, and reliable guidance when traveling, studying, or working abroad. This inspired the creation of a service that helps others navigate the same journey with ease. Today, Bridge Travel Solutions supports clients with travel bookings, visa assistance, job opportunities, and study abroad pathways. We focus on providing clear guidance, trusted connections, and personalized support for every client. Our goal is to simplify international travel and open doors for people to explore, work, and study globally with confidence.
+We help individuals access global travel, job opportunities, and education pathways with guided support from start to finish.
 </p>
 
+<a class="btn" href="contact.html">Start Your Journey</a>
+
+<div class="trust">
+<span>✔ Dubai-Based Support</span>
+<span>✔ Global Travel Guidance</span>
+<span>✔ Job & Study Assistance</span>
+<span>✔ Fast Response Service</span>
 </div>
 
-<!-- SERVICES -->
+</div>
+</div>
+
+<!-- ABOUT -->
 <div class="container">
-<h2>Our Services</h2>
+<h2>Who We Are</h2>
+
+<div class="about">
+Bridge Travel Solutions was created from real travel experience and understanding of how difficult it can be to navigate international opportunities.
+The founder experienced challenges moving across countries and accessing reliable information, which inspired the creation of a support system for others.
+Today, we guide people through travel arrangements, visa processes, job opportunities abroad, and study pathways.
+Our goal is to simplify global access and provide clear, honest, and practical support.
+We believe that opportunity should not be complicated, and we exist to make the process easier for individuals and families.
+</div>
+</div>
+
+<!-- SERVICES PREVIEW -->
+<div class="container">
+<h2>What We Offer</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>✈️ Flight Booking</h3>
-<p>Affordable international flights with best routes and airlines.</p>
+<h3>✈️ Flights & Travel</h3>
+<p>We assist with flight bookings and travel planning for individuals and groups worldwide.</p>
+<a class="small-btn" href="services.html">Read More</a>
 </div>
 
 <div class="card">
-<h3>🛂 Visa Assistance</h3>
-<p>Complete visa support for travel, work and study abroad.</p>
+<h3>🛂 Visa Support</h3>
+<p>Guidance for travel, work, and study visa applications with step-by-step support.</p>
+<a class="small-btn" href="services.html">Read More</a>
 </div>
 
 <div class="card">
 <h3>🌍 Jobs Abroad</h3>
-<p>Access verified job opportunities and relocation guidance.</p>
+<p>We connect people to verified job opportunities and support relocation processes.</p>
+<a class="small-btn" href="services.html">Read More</a>
 </div>
 
 <div class="card">
 <h3>🎓 Study Abroad</h3>
-<p>University applications, scholarships and student visas.</p>
+<p>Assistance with university applications, admissions, and student visa processes.</p>
+<a class="small-btn" href="services.html">Read More</a>
 </div>
 
-<div class="card">
-<h3>🚗 Airport Pick-up</h3>
-<p>Reliable airport transfers ensuring safe arrival and comfort.</p>
-</div>
-
-<div class="card">
-<h3>🏙️ City Tours</h3>
-<p>Guided tours across Dubai with customized travel experiences.</p>
-</div>
-
-</div>
-</div>
-
-<!-- WHY -->
-<div class="container">
-<h2>Why Choose Us</h2>
-
-<div class="grid">
-<div class="card">✔ Dubai Based Agency</div>
-<div class="card">✔ Trusted Global Network</div>
-<div class="card">✔ Fast Response</div>
-<div class="card">✔ End-to-End Support</div>
 </div>
 </div>
 
 <!-- CTA -->
 <div class="cta">
-<h2>Ready to Start Your Journey?</h2>
-<a class="btn" href="https://wa.me/971583017066">Contact Us on WhatsApp</a>
+<h2>Ready to Move Forward?</h2>
+<p style="color:#ccc;">Let’s help you take the next step toward travel, work, or study abroad.</p>
+<a class="btn" href="contact.html">Contact Us on WhatsApp</a>
 </div>
 
 <footer>
