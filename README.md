@@ -55,7 +55,7 @@ background:rgba(0,0,0,0.75);
 position:relative;
 max-width:900px;
 margin:auto;
-animation:fadeIn 1.2s ease-in;
+animation:fadeIn 1s ease-in;
 }
 
 .hero img{
@@ -91,7 +91,7 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* TRUST NUMBERS SECTION */
+/* TRUST NUMBERS */
 .stats-section{
 position:relative;
 background:url('https://images.unsplash.com/photo-1526779259212-939e64788e3c') center/cover;
@@ -103,7 +103,7 @@ text-align:center;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.85);
 }
 
 .stats-content{
@@ -149,7 +149,7 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* ABOUT */
+/* WHO WE ARE */
 .about-wrap{
 display:flex;
 flex-wrap:wrap;
@@ -183,6 +183,25 @@ border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 font-size:13px;
+}
+
+/* HOW IT WORKS */
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.step{
+background:#111;
+padding:20px;
+border-radius:12px;
+border:1px solid #222;
+text-align:center;
+}
+
+.step h3{
+color:gold;
 }
 
 /* SERVICES */
@@ -225,7 +244,6 @@ font-size:14px;
 line-height:1.5;
 }
 
-/* READ MORE BUTTON */
 .readmore{
 display:inline-block;
 margin-top:10px;
@@ -236,6 +254,22 @@ border-radius:20px;
 font-size:12px;
 font-weight:bold;
 text-decoration:none;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.testimonial{
+background:#111;
+padding:20px;
+border-radius:12px;
+border:1px solid #222;
+color:#ccc;
+font-style:italic;
 }
 
 /* CTA */
@@ -310,20 +344,18 @@ We connect people to global travel, jobs, and education opportunities through tr
 <h2>Trusted by Clients Across Borders</h2>
 
 <div class="stats">
-
 <div class="stat">100+ Clients Assisted</div>
 <div class="stat">Global Travel Support</div>
 <div class="stat">Visa & Job Guidance</div>
 <div class="stat">Fast Response Service</div>
-
 </div>
 
 </div>
 </div>
 
-<!-- ABOUT -->
+<!-- WHO WE ARE -->
 <div class="container">
-<h2>About Us</h2>
+<h2>Who We Are</h2>
 
 <div class="about-wrap">
 
@@ -338,6 +370,35 @@ We provide step-by-step guidance and trusted connections to make global opportun
 <br><br>
 
 <a class="small-btn" href="about.html">Read More About Us</a>
+</div>
+
+</div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="container">
+<h2>How It Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>1. Contact Us</h3>
+<p>Reach out via WhatsApp or contact form.</p>
+</div>
+
+<div class="step">
+<h3>2. We Guide You</h3>
+<p>We understand your needs and explain options.</p>
+</div>
+
+<div class="step">
+<h3>3. Processing</h3>
+<p>We assist with documentation and applications.</p>
+</div>
+
+<div class="step">
+<h3>4. Completion</h3>
+<p>We support until your travel or plan is successful.</p>
 </div>
 
 </div>
@@ -401,6 +462,27 @@ We provide step-by-step guidance and trusted connections to make global opportun
 <p>Guided Dubai tours and customized travel experiences.</p>
 <a class="readmore" href="services.html">Read More</a>
 </div>
+</div>
+
+</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="container">
+<h2>Client Experience</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+“Very smooth process and helpful guidance from start to finish.”
+</div>
+
+<div class="testimonial">
+“Quick response and clear explanation of everything.”
+</div>
+
+<div class="testimonial">
+“They made my travel planning much easier and stress-free.”
 </div>
 
 </div>
