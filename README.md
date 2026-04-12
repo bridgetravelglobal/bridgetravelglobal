@@ -12,6 +12,7 @@ margin:0;
 font-family:Arial;
 background:#050505;
 color:white;
+overflow-x:hidden;
 }
 
 /* NAV */
@@ -24,6 +25,7 @@ background:#000;
 border-bottom:1px solid gold;
 position:sticky;
 top:0;
+z-index:1000;
 }
 
 nav a{
@@ -53,6 +55,7 @@ background:rgba(0,0,0,0.75);
 position:relative;
 max-width:900px;
 margin:auto;
+animation:fadeIn 1.2s ease-in;
 }
 
 .hero img{
@@ -81,24 +84,56 @@ color:black;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
+transition:0.3s;
 }
 
-/* TRUST NUMBERS */
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* TRUST NUMBERS SECTION */
+.stats-section{
+position:relative;
+background:url('https://images.unsplash.com/photo-1526779259212-939e64788e3c') center/cover;
+padding:80px 20px;
+text-align:center;
+}
+
+.stats-section::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.8);
+}
+
+.stats-content{
+position:relative;
+max-width:1000px;
+margin:auto;
+}
+
 .stats{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:20px;
-margin-top:25px;
-color:#aaa;
-font-size:13px;
+margin-top:20px;
 }
 
 .stat{
-border:1px solid #222;
-padding:10px 15px;
-border-radius:10px;
-background:#111;
+background:rgba(255,255,255,0.05);
+border:1px solid #333;
+padding:20px 25px;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+color:gold;
+min-width:180px;
+transition:0.3s;
+}
+
+.stat:hover{
+transform:translateY(-5px);
 }
 
 /* SECTION */
@@ -114,7 +149,7 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* ABOUT BLOCK */
+/* ABOUT */
 .about-wrap{
 display:flex;
 flex-wrap:wrap;
@@ -162,6 +197,11 @@ background:#111;
 border-radius:12px;
 border:1px solid #222;
 overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.03);
 }
 
 .card img{
@@ -176,13 +216,26 @@ padding:15px;
 
 .card h3{
 color:gold;
-margin-top:0;
+margin:0;
 }
 
 .card p{
 color:#ccc;
 font-size:14px;
 line-height:1.5;
+}
+
+/* READ MORE BUTTON */
+.readmore{
+display:inline-block;
+margin-top:10px;
+padding:8px 14px;
+background:gold;
+color:black;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+text-decoration:none;
 }
 
 /* CTA */
@@ -199,6 +252,12 @@ footer{
 text-align:center;
 padding:20px;
 color:#777;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 /* WHATSAPP */
@@ -240,12 +299,23 @@ We connect people to global travel, jobs, and education opportunities through tr
 
 <a class="btn" href="contact.html">Start Your Journey</a>
 
-<!-- TRUST NUMBERS -->
+</div>
+</div>
+
+<!-- STATS -->
+<div class="stats-section">
+
+<div class="stats-content">
+
+<h2>Trusted by Clients Across Borders</h2>
+
 <div class="stats">
-<div class="stat">✔ 100+ Clients Assisted</div>
-<div class="stat">✔ Global Travel Support</div>
-<div class="stat">✔ Visa & Job Guidance</div>
-<div class="stat">✔ Fast Response Service</div>
+
+<div class="stat">100+ Clients Assisted</div>
+<div class="stat">Global Travel Support</div>
+<div class="stat">Visa & Job Guidance</div>
+<div class="stat">Fast Response Service</div>
+
 </div>
 
 </div>
@@ -261,10 +331,10 @@ We connect people to global travel, jobs, and education opportunities through tr
 
 <div class="about-text">
 Bridge Travel Solutions was created from real-life travel experience and the challenges faced when moving across countries.
-The founder, an African traveler, experienced firsthand the difficulties of accessing reliable information, visa guidance, and job opportunities abroad.
+The founder, an African traveler, experienced difficulties accessing reliable travel, visa, and job information abroad.
 This inspired the creation of a support system that helps others travel, work, and study internationally with confidence.
-We provide clear guidance, trusted connections, and step-by-step assistance.
-Our mission is to simplify global opportunities and make them accessible to everyone.
+We provide step-by-step guidance and trusted connections to make global opportunities easier to access.
+
 <br><br>
 
 <a class="small-btn" href="about.html">Read More About Us</a>
@@ -284,6 +354,7 @@ Our mission is to simplify global opportunities and make them accessible to ever
 <div class="card-content">
 <h3>Flight Booking</h3>
 <p>Affordable international flights with flexible travel options.</p>
+<a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
 
@@ -292,6 +363,7 @@ Our mission is to simplify global opportunities and make them accessible to ever
 <div class="card-content">
 <h3>Visa Assistance</h3>
 <p>Full support for travel, work, and study visa applications.</p>
+<a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
 
@@ -300,6 +372,7 @@ Our mission is to simplify global opportunities and make them accessible to ever
 <div class="card-content">
 <h3>Jobs Abroad</h3>
 <p>Verified job opportunities and relocation guidance.</p>
+<a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
 
@@ -308,6 +381,7 @@ Our mission is to simplify global opportunities and make them accessible to ever
 <div class="card-content">
 <h3>Study Abroad</h3>
 <p>University admissions, scholarships, and student visas.</p>
+<a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
 
@@ -316,6 +390,7 @@ Our mission is to simplify global opportunities and make them accessible to ever
 <div class="card-content">
 <h3>Airport Pick-up</h3>
 <p>Safe and reliable airport transfer services in Dubai.</p>
+<a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
 
@@ -324,6 +399,7 @@ Our mission is to simplify global opportunities and make them accessible to ever
 <div class="card-content">
 <h3>City Tours</h3>
 <p>Guided Dubai tours and customized travel experiences.</p>
+<a class="readmore" href="services.html">Read More</a>
 </div>
 </div>
 
