@@ -29,9 +29,7 @@ text-decoration:none;
 font-size:14px;
 }
 
-nav a:hover{
-color:gold;
-}
+nav a:hover{color:gold;}
 
 /* HERO */
 .hero{
@@ -48,24 +46,19 @@ inset:0;
 background:rgba(0,0,0,0.75);
 }
 
-.hero-content{
-position:relative;
-}
+.hero-content{position:relative;}
 
 .hero img{
 width:180px;
-margin-bottom:10px;
 }
 
 .hero h1{
 color:gold;
 font-size:48px;
-margin:10px 0;
 }
 
 .hero p{
 color:#ccc;
-font-size:16px;
 }
 
 .btn{
@@ -92,7 +85,7 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* CARDS */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -107,14 +100,17 @@ border:1px solid #222;
 text-align:center;
 }
 
-.card h3{
-color:gold;
+.card h3{color:gold;}
+
+p{
+color:#ccc;
+line-height:1.6;
 }
 
-/* CTA STRIP */
+/* CTA */
 .cta{
 text-align:center;
-padding:40px 20px;
+padding:40px;
 background:#111;
 border-top:1px solid gold;
 border-bottom:1px solid gold;
@@ -161,11 +157,19 @@ text-decoration:none;
 <h1>Bridge Travel Solutions</h1>
 <p>Your trusted partner for Travel, Jobs & Study Abroad</p>
 
-<a class="btn" href="https://wa.me/971583017066">
-Start Your Journey
-</a>
+<a class="btn" href="https://wa.me/971583017066">Start Your Journey</a>
 
 </div>
+</div>
+
+<!-- ABOUT PREVIEW -->
+<div class="container">
+<h2>About Us</h2>
+
+<p>
+Bridge Travel Solutions was founded with a simple but powerful vision — to make global travel and opportunities accessible to everyone. The company was started by an African traveler who experienced the challenges of moving across countries and understanding new systems. Through real-life experience, he saw how difficult it can be to find the right information, trusted support, and reliable guidance when traveling, studying, or working abroad. This inspired the creation of a service that helps others navigate the same journey with ease. Today, Bridge Travel Solutions supports clients with travel bookings, visa assistance, job opportunities, and study abroad pathways. We focus on providing clear guidance, trusted connections, and personalized support for every client. Our goal is to simplify international travel and open doors for people to explore, work, and study globally with confidence.
+</p>
+
 </div>
 
 <!-- SERVICES -->
@@ -173,6 +177,7 @@ Start Your Journey
 <h2>Our Services</h2>
 
 <div class="grid">
+
 <div class="card">
 <h3>✈️ Flight Booking</h3>
 <p>Affordable international flights with best routes and airlines.</p>
@@ -192,6 +197,17 @@ Start Your Journey
 <h3>🎓 Study Abroad</h3>
 <p>University applications, scholarships and student visas.</p>
 </div>
+
+<div class="card">
+<h3>🚗 Airport Pick-up</h3>
+<p>Reliable airport transfers ensuring safe arrival and comfort.</p>
+</div>
+
+<div class="card">
+<h3>🏙️ City Tours</h3>
+<p>Guided tours across Dubai with customized travel experiences.</p>
+</div>
+
 </div>
 </div>
 
