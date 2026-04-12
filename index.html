@@ -17,7 +17,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* 🚨 FIX GHOST TEXT (GitHub README ISSUE) */
+/* 🚨 REMOVE GHOST / README TEXT */
 body > h1,
 body > h2,
 body > p:first-of-type,
@@ -27,7 +27,7 @@ header,
 display:none !important;
 }
 
-/* BRAND TOP STRIP */
+/* BRAND TOP */
 .brand-strip{
 display:flex;
 justify-content:center;
@@ -36,11 +36,11 @@ background:#050505;
 }
 
 .brand-strip img{
-width:90px;
+width:130px;
 opacity:0.95;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
 display:flex;
 justify-content:center;
@@ -89,27 +89,32 @@ object-fit:cover;
 z-index:0;
 }
 
-/* OVERLAY */
+/* AIRPORT IMAGE LAYER */
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df') center/cover;
+opacity:0.25;
+z-index:1;
+}
+
+/* DARK OVERLAY */
 .hero::after{
 content:"";
 position:absolute;
 inset:0;
 background:rgba(0,0,0,0.65);
-z-index:1;
+z-index:2;
 }
 
 /* HERO CONTENT */
 .hero-content{
 position:relative;
-z-index:2;
+z-index:3;
 max-width:900px;
 padding:20px;
 animation:fadeIn 1.2s ease-in;
-}
-
-.hero img{
-width:120px;
-margin-bottom:10px;
 }
 
 .hero h1{
@@ -160,6 +165,18 @@ background:rgba(0,0,0,0.85);
 position:relative;
 max-width:1000px;
 margin:auto;
+}
+
+.stats-section h2{
+color:#f5c542;
+font-size:28px;
+opacity:1;
+margin-bottom:5px;
+}
+
+.stats-section p{
+color:#ccc;
+margin-top:0;
 }
 
 .stats{
@@ -364,7 +381,7 @@ to{opacity:1; transform:translateY(0);}
 
 <body>
 
-<!-- BRAND -->
+<!-- TOP LOGO ONLY -->
 <div class="brand-strip">
 <img src="logo.png">
 </div>
@@ -387,8 +404,6 @@ to{opacity:1; transform:translateY(0);}
 
 <div class="hero-content">
 
-<img src="logo.png">
-
 <h1>Bridge Travel Solutions</h1>
 
 <p>Travel | Jobs | Education Opportunities Abroad</p>
@@ -400,13 +415,19 @@ to{opacity:1; transform:translateY(0);}
 
 <!-- STATS -->
 <div class="stats-section">
+
+<div class="stats-content">
+
 <h2>Trusted by Clients Across Borders</h2>
+<p>Real support. Real results. Real journeys.</p>
 
 <div class="stats">
 <div class="stat">50+ Clients Assisted</div>
 <div class="stat">Visa Support</div>
 <div class="stat">Job Abroad Guidance</div>
 <div class="stat">Study Support</div>
+</div>
+
 </div>
 </div>
 
