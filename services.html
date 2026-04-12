@@ -37,27 +37,17 @@ nav a:hover{
 color:#f5c542;
 }
 
-/* HERO */
+/* HERO (FIXED + LIGHT BACKGROUND ADDED) */
 .hero{
-background:url('https://images.unsplash.com/photo-1502920917128-1aa500764b4f') center/cover;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1529070538774-1843cb3265df') center/cover;
 position:relative;
-height:90vh;
+height:70vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,0.65),
-rgba(0,0,0,0.55),
-rgba(0,0,0,0.7)
-);
 }
 
 .hero-content{
@@ -238,7 +228,7 @@ color:#777;
 <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO (FIXED VERSION INSERTED) -->
 <div class="hero">
 <div class="hero-content">
 <h1>Our Services</h1>
