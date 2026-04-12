@@ -7,6 +7,8 @@
 <title>Bridge Travel Solutions | Travel, Jobs & Study Abroad</title>
 
 <style>
+
+/* RESET */
 body{
 margin:0;
 font-family:Arial;
@@ -15,7 +17,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* 🚨 GHOST TEXT FIX (GitHub README / blue text issue) */
+/* 🚨 FIX GHOST TEXT (GitHub README ISSUE) */
 body > h1,
 body > h2,
 body > p:first-of-type,
@@ -23,30 +25,47 @@ header,
 #readme,
 .markdown-body{
 display:none !important;
-visibility:hidden !important;
-height:0;
 }
 
-/* NAV */
+/* BRAND TOP STRIP */
+.brand-strip{
+display:flex;
+justify-content:center;
+padding:12px 0;
+background:#050505;
+}
+
+.brand-strip img{
+width:90px;
+opacity:0.95;
+}
+
+/* NAVBAR */
 nav{
 display:flex;
 justify-content:center;
-gap:25px;
-padding:15px;
-background:#000;
-border-bottom:1px solid #222;
+align-items:center;
+gap:30px;
+padding:18px 25px;
+background:rgba(0,0,0,0.85);
+backdrop-filter: blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 position:sticky;
 top:0;
 z-index:1000;
 }
 
 nav a{
-color:#ccc;
+color:#ddd;
 text-decoration:none;
 font-size:14px;
+letter-spacing:1px;
+transition:0.3s;
 }
 
-nav a:hover{color:#f5c542;}
+nav a:hover{
+color:#f5c542;
+}
 
 /* HERO */
 .hero{
@@ -59,7 +78,7 @@ text-align:center;
 overflow:hidden;
 }
 
-/* VIDEO BACKGROUND */
+/* VIDEO */
 .hero video{
 position:absolute;
 top:0;
@@ -70,7 +89,7 @@ object-fit:cover;
 z-index:0;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .hero::after{
 content:"";
 position:absolute;
@@ -89,9 +108,8 @@ animation:fadeIn 1.2s ease-in;
 }
 
 .hero img{
-width:120px; /* PROFESSIONAL LOGO SIZE */
+width:120px;
 margin-bottom:10px;
-opacity:0.95;
 }
 
 .hero h1{
@@ -123,7 +141,7 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
-/* STATS SECTION */
+/* STATS */
 .stats-section{
 background:url('https://images.unsplash.com/photo-1526779259212-939e64788e3c') center/cover;
 padding:80px 20px;
@@ -181,7 +199,7 @@ text-align:center;
 margin-bottom:30px;
 }
 
-/* WHO WE ARE */
+/* ABOUT */
 .about-wrap{
 display:flex;
 flex-wrap:wrap;
@@ -220,8 +238,9 @@ font-size:13px;
 /* SERVICES */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+align-items:stretch;
 }
 
 .card{
@@ -230,6 +249,8 @@ border-radius:12px;
 border:1px solid #222;
 overflow:hidden;
 transition:0.3s;
+display:flex;
+flex-direction:column;
 }
 
 .card:hover{
@@ -244,6 +265,10 @@ object-fit:cover;
 
 .card-content{
 padding:15px;
+flex:1;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
 }
 
 .card h3{
@@ -283,6 +308,21 @@ border-radius:12px;
 border:1px solid #222;
 color:#ccc;
 line-height:1.6;
+position:relative;
+}
+
+.testimonial::before{
+content:"“";
+font-size:40px;
+color:#f5c542;
+position:absolute;
+top:10px;
+left:10px;
+opacity:0.3;
+}
+
+.testimonial strong{
+color:#f5c542;
 }
 
 /* CTA */
@@ -301,12 +341,6 @@ padding:20px;
 color:#777;
 }
 
-/* ANIMATION */
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
-}
-
 /* WHATSAPP */
 .whatsapp{
 position:fixed;
@@ -318,10 +352,22 @@ border-radius:50px;
 color:white;
 text-decoration:none;
 }
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
 </style>
 </head>
 
 <body>
+
+<!-- BRAND -->
+<div class="brand-strip">
+<img src="logo.png">
+</div>
 
 <!-- NAV -->
 <nav>
@@ -345,9 +391,7 @@ text-decoration:none;
 
 <h1>Bridge Travel Solutions</h1>
 
-<p>
-We connect people to global travel, jobs, and education opportunities through trusted guidance and real support.
-</p>
+<p>Travel | Jobs | Education Opportunities Abroad</p>
 
 <a class="btn" href="contact.html">Start Your Journey</a>
 
@@ -356,22 +400,17 @@ We connect people to global travel, jobs, and education opportunities through tr
 
 <!-- STATS -->
 <div class="stats-section">
-
-<div class="stats-content">
-
 <h2>Trusted by Clients Across Borders</h2>
 
 <div class="stats">
 <div class="stat">50+ Clients Assisted</div>
-<div class="stat">Global Travel Support</div>
-<div class="stat">Visa & Job Guidance</div>
-<div class="stat">Fast Response Service</div>
-</div>
-
+<div class="stat">Visa Support</div>
+<div class="stat">Job Abroad Guidance</div>
+<div class="stat">Study Support</div>
 </div>
 </div>
 
-<!-- WHO WE ARE -->
+<!-- ABOUT -->
 <div class="container">
 <h2>Who We Are</h2>
 
@@ -380,10 +419,10 @@ We connect people to global travel, jobs, and education opportunities through tr
 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
 
 <div class="about-text">
-Bridge Travel Solutions was created from real-life travel experience and challenges faced when moving across countries.
-The founder, an African traveler, experienced difficulties accessing reliable travel, visa, and job information abroad.
+Bridge Travel Solutions was created from real travel experience and challenges faced across countries.
+The founder, an African traveler, experienced difficulties accessing reliable travel and job opportunities abroad.
 
-We now help people travel, work, and study internationally with confidence through guided support and trusted connections.
+We now help people travel, work, and study internationally through trusted guidance and support.
 
 <br><br>
 
@@ -463,15 +502,24 @@ We now help people travel, work, and study internationally with confidence throu
 <div class="testimonials">
 
 <div class="testimonial">
-“They guided me step by step and made everything easy to understand.”
+Very smooth process and clear communication from start to finish.
+<br><br>
+<strong>Jacob</strong><br>
+Malawi • March 2024
 </div>
 
 <div class="testimonial">
-“Very responsive and professional support throughout the process.”
+They helped me understand everything step by step. Very supportive.
+<br><br>
+<strong>Alice</strong><br>
+Zambia • July 2020
 </div>
 
 <div class="testimonial">
-“Reliable service and clear communication from start to finish.”
+Professional service and very responsive team.
+<br><br>
+<strong>Chris</strong><br>
+Dubai • January 2026
 </div>
 
 </div>
