@@ -102,26 +102,6 @@ max-width:900px;
 margin:auto;
 }
 
-/* HOW IT WORKS */
-.steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-margin-top:30px;
-}
-
-.step{
-background:#111;
-padding:20px;
-border-radius:12px;
-border:1px solid #222;
-text-align:center;
-}
-
-.step h3{
-color:#f5c542;
-}
-
 /* GRID */
 .grid{
 display:grid;
@@ -130,13 +110,27 @@ gap:20px;
 margin-top:30px;
 }
 
+/* SERVICE CARD WITH IMAGE BACKGROUND */
 .card{
-background:#111;
-padding:25px;
+position:relative;
 border-radius:14px;
+overflow:hidden;
+padding:25px;
+min-height:260px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
 border:1px solid #222;
 transition:0.3s;
-position:relative;
+background-size:cover;
+background-position:center;
+}
+
+.card::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.75);
 }
 
 .card:hover{
@@ -144,7 +138,23 @@ transform:translateY(-5px);
 border-color:#f5c542;
 }
 
-/* PRIORITY BADGE */
+.card h3, .card p, .card a, .badge{
+position:relative;
+z-index:2;
+}
+
+.card h3{
+color:#f5c542;
+margin-bottom:8px;
+}
+
+.card p{
+color:#ddd;
+font-size:14px;
+line-height:1.5;
+}
+
+/* BADGE */
 .badge{
 position:absolute;
 top:10px;
@@ -155,27 +165,18 @@ font-size:11px;
 padding:5px 10px;
 border-radius:20px;
 font-weight:bold;
+z-index:2;
 }
 
-.card h3{
-color:#f5c542;
-}
-
-.card p{
-color:#ccc;
-line-height:1.6;
-font-size:14px;
-}
-
-/* CTA BUTTONS */
+/* BUTTONS */
 .btn{
 display:inline-block;
-margin-top:15px;
-padding:12px 18px;
+margin-top:10px;
+padding:10px 16px;
 border-radius:40px;
 text-decoration:none;
 font-weight:bold;
-font-size:13px;
+font-size:12px;
 }
 
 .whatsapp{
@@ -217,10 +218,6 @@ background:#111;
 margin-top:50px;
 }
 
-.cta h2{
-font-size:34px;
-}
-
 footer{
 text-align:center;
 padding:20px;
@@ -246,48 +243,14 @@ color:#777;
 <div class="hero-content">
 <h1>Our Services</h1>
 <p>
-Confused about moving abroad, finding jobs, visas, or travel planning? We simplify everything and guide you step-by-step until your journey is complete.
+We simplify travel, jobs, visas, and relocation processes with real guidance and step-by-step support until your journey is complete.
 </p>
 </div>
 </div>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-Based in Dubai 🇦🇪 | Ground Support in Malawi 🇲🇼 | Step-by-Step Real Human Guidance
-</div>
-
-<!-- HOW IT WORKS -->
-<div class="container">
-
-<h2>How It Works</h2>
-
-<p>
-Simple process designed to remove confusion and give you clarity from start to finish.
-</p>
-
-<div class="steps">
-
-<div class="step">
-<h3>1. Contact Us</h3>
-<p>Reach us via WhatsApp or Email.</p>
-</div>
-
-<div class="step">
-<h3>2. Share Your Goal</h3>
-<p>Tell us your travel or work plan.</p>
-</div>
-
-<div class="step">
-<h3>3. We Guide You</h3>
-<p>We give step-by-step support.</p>
-</div>
-
-<div class="step">
-<h3>4. Completion</h3>
-<p>You move forward with confidence.</p>
-</div>
-
-</div>
+Based in Dubai 🇦🇪 | Ground Support in Malawi 🇲🇼 | Real Human Guidance | Step-by-Step Support
 </div>
 
 <!-- SERVICES -->
@@ -297,46 +260,46 @@ Simple process designed to remove confusion and give you clarity from start to f
 
 <div class="grid">
 
-<div class="card">
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df')">
 <div class="badge">POPULAR</div>
 <h3>Visa Assistance</h3>
-<p>We guide you through visa processes with clear steps and personal support to improve success chances.</p>
+<p>We guide you step-by-step through visa applications, documentation, and preparation to improve your approval chances with clear, real guidance.</p>
 <a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
 <a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
-<div class="card">
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d')">
 <div class="badge">HIGH DEMAND</div>
 <h3>Jobs Abroad</h3>
-<p>We connect you with verified opportunities and help you understand requirements and preparation steps.</p>
+<p>We help you access verified job pathways abroad and guide you through requirements, preparation, and application support.</p>
 <a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
 <a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
-<div class="card">
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05')">
 <h3>Flight Booking</h3>
-<p>We help you find affordable and reliable flights for your destination with smooth planning support.</p>
+<p>We help you find affordable and reliable flights, ensuring smooth travel planning with no confusion or hidden steps.</p>
 <a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
 <a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
-<div class="card">
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')">
 <h3>Study Abroad</h3>
-<p>We assist with university applications, documentation, and admission guidance for international education.</p>
+<p>We assist with university applications, admissions guidance, and full documentation support for international education.</p>
 <a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
 <a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
-<div class="card">
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70')">
 <h3>Airport Pick-up</h3>
-<p>Safe and reliable airport arrival support in Dubai for smooth transition when you land.</p>
+<p>Safe and reliable airport pickup in Dubai ensuring smooth arrival and stress-free transfer to your destination.</p>
 <a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
 <a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
-<div class="card">
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1526779259212-939e64788e3c')">
 <h3>City Tours (Dubai)</h3>
-<p>Explore Dubai with guided tours designed for visitors and newcomers.</p>
+<p>Explore Dubai with guided city tours designed for safe, enjoyable, and memorable experiences for visitors.</p>
 <a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
 <a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
@@ -352,18 +315,23 @@ Simple process designed to remove confusion and give you clarity from start to f
 <div class="testimonials">
 
 <div class="testimonial">
-“They guided me step by step until I successfully started my process.”<br><br>
-<strong>Jacob</strong> – Malawi
+“I got a job in Dubai after their guidance. The process was clear and supportive from start to finish.”<br><br>
+<strong>Chikondi Banda</strong> – Malawi
 </div>
 
 <div class="testimonial">
-“Very professional and easy to communicate with.”<br><br>
-<strong>Alice</strong> – Zambia
+“They helped me plan my holiday and everything went smoothly. Very professional and responsive.”<br><br>
+<strong>Thokozani Phiri</strong> – Malawi
 </div>
 
 <div class="testimonial">
-“Clear process and real support from start to finish.”<br><br>
-<strong>Chris</strong> – Dubai
+“I was confused about visas, but they guided me step-by-step until I successfully started my process.”<br><br>
+<strong>Blessings Mwale</strong> – Malawi
+</div>
+
+<div class="testimonial">
+“Very reliable service. I traveled safely and everything was handled professionally.”<br><br>
+<strong>Grace Jere</strong> – Malawi
 </div>
 
 </div>
@@ -372,7 +340,7 @@ Simple process designed to remove confusion and give you clarity from start to f
 <!-- CTA -->
 <div class="cta">
 <h2>Start Your Journey Today</h2>
-<p>Talk to us and get clear guidance within 24 hours.</p>
+<p>Get real guidance within 24 hours via WhatsApp or Email.</p>
 
 <a class="btn whatsapp" href="https://wa.me/971583017066">WhatsApp Us</a>
 <a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email Us</a>
