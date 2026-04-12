@@ -36,7 +36,7 @@ font-size:14px;
 
 nav a:hover{color:#f5c542;}
 
-/* HERO VIDEO */
+/* HERO */
 .hero{
 position:relative;
 height:100vh;
@@ -47,22 +47,26 @@ text-align:center;
 overflow:hidden;
 }
 
-.hero video{
+/* VIDEO BACKGROUND */
+.hero-video{
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
 object-fit:cover;
+z-index:0;
 }
 
-.hero::after{
-content:"";
+/* DARK OVERLAY */
+.hero-overlay{
 position:absolute;
 inset:0;
 background:rgba(0,0,0,0.65);
+z-index:1;
 }
 
+/* HERO CONTENT */
 .hero-content{
 position:relative;
 z-index:2;
@@ -72,7 +76,7 @@ animation:fadeIn 1.2s ease-in;
 }
 
 .hero img{
-width:120px; /* SMALL PROFESSIONAL LOGO */
+width:120px;
 margin-bottom:10px;
 opacity:0.95;
 }
@@ -301,6 +305,11 @@ border-radius:50px;
 color:white;
 text-decoration:none;
 }
+
+/* SAFETY FIX (removes unwanted top text issue) */
+body > h1:first-of-type{
+display:none !important;
+}
 </style>
 </head>
 
@@ -315,15 +324,21 @@ text-decoration:none;
 <a href="contact.html">Contact</a>
 </nav>
 
-<!-- HERO VIDEO -->
+<!-- HERO -->
 <div class="hero">
-<video autoplay muted loop playsinline>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline class="hero-video">
 <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-dubai-1920x1080-8583.mp4" type="video/mp4">
 </video>
 
+<!-- OVERLAY -->
+<div class="hero-overlay"></div>
+
+<!-- CONTENT -->
 <div class="hero-content">
 
-<img src="logo.png">
+<img src="logo.png" alt="logo">
 
 <h1>Bridge Travel Solutions</h1>
 
@@ -445,15 +460,15 @@ We provide step-by-step guidance and trusted connections to make global opportun
 <div class="testimonials">
 
 <div class="testimonial">
-“I wasn’t sure how to start, but they guided me step by step until everything made sense.”
+“I wasn’t sure where to start, but they guided me step by step until everything made sense.”
 </div>
 
 <div class="testimonial">
-“Very fast communication and clear explanations throughout the process.”
+“They explained everything clearly and made the process very simple.”
 </div>
 
 <div class="testimonial">
-“They made everything feel simple and stress-free.”
+“Very fast communication and reliable support throughout.”
 </div>
 
 </div>
