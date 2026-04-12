@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Bridge Travel Solutions</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#050505;
+color:white;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:center;
+gap:25px;
+padding:15px;
+background:#000;
+border-bottom:1px solid gold;
+}
+
+nav a{
+color:#ccc;
+text-decoration:none;
+}
+
+nav a:hover{color:gold;}
+
+/* CONTAINER */
+.container{
+max-width:800px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1{
+text-align:center;
+color:gold;
+margin-bottom:30px;
+}
+
+/* CONTACT BOX */
+.contact-box{
+background:#111;
+padding:30px;
+border-radius:12px;
+border:1px solid #222;
+}
+
+/* FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, textarea{
+padding:12px;
+border:none;
+border-radius:8px;
+background:#222;
+color:white;
+}
+
+textarea{
+min-height:120px;
+}
+
+button{
+padding:14px;
+background:gold;
+color:black;
+border:none;
+border-radius:50px;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* INFO */
+.info{
+margin-top:30px;
+color:#ccc;
+line-height:1.6;
+}
+
+/* SOCIALS */
+.socials{
+display:flex;
+gap:15px;
+margin-top:15px;
+}
+
+.socials a{
+color:gold;
+text-decoration:none;
+font-size:14px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+color:#777;
+border-top:1px solid #222;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:14px 18px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+<h1>Contact Us</h1>
+
+<div class="contact-box">
+
+<form onsubmit="sendToWhatsApp(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="phone" placeholder="Your Phone / WhatsApp" required>
+
+<select id="service">
+<option>Flight Booking</option>
+<option>Visa Assistance</option>
+<option>Jobs Abroad</option>
+<option>Study Abroad</option>
+<option>Airport Pick-up</option>
+<option>City Tours</option>
+</select>
+
+<textarea id="message" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Enquiry</button>
+</form>
+
+<div class="info">
+<p><strong>Phone / WhatsApp:</strong> +971 58 301 7066</p>
+<p><strong>Email:</strong> bridgetravelsolutionsglobal@gmail.com</p>
+
+<div class="socials">
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">Twitter</a>
+<a href="https://www.tiktok.com/@bridgetravelglobal" target="_blank">TikTok</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Bridge Travel Solutions
+</footer>
+
+<a class="whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
+
+<script>
+function sendToWhatsApp(event){
+event.preventDefault();
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let service = document.getElementById("service").value;
+let message = document.getElementById("message").value;
+
+let url = "https://wa.me/971583017066?text="
++ "Name: " + name + "%0A"
++ "Phone: " + phone + "%0A"
++ "Service: " + service + "%0A"
++ "Message: " + message;
+
+window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
