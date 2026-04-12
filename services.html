@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Bridge Travel Solutions</title>
+
+<title>Our Services | Bridge Travel Solutions</title>
 
 <style>
+
 body{
 margin:0;
 font-family:Arial;
@@ -17,74 +19,128 @@ color:white;
 nav{
 display:flex;
 justify-content:center;
-gap:25px;
-padding:15px;
-background:#000;
-border-bottom:1px solid gold;
+gap:30px;
+padding:18px;
+background:rgba(0,0,0,0.85);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
-color:#ccc;
+color:#ddd;
 text-decoration:none;
+font-size:17px;
 }
 
-nav a:hover{color:gold;}
+nav a:hover{
+color:#f5c542;
+}
 
-/* CONTAINER */
+/* HERO */
+.hero{
+text-align:center;
+padding:80px 20px;
+background:url('https://images.unsplash.com/photo-1502920917128-1aa500764b4f') center/cover;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.7);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+color:#f5c542;
+font-size:50px;
+}
+
+.hero p{
+color:#ccc;
+max-width:800px;
+margin:auto;
+line-height:1.6;
+}
+
+/* SECTION */
 .container{
 max-width:1100px;
 margin:auto;
 padding:60px 20px;
 }
 
-h1{
+h2{
+color:#f5c542;
 text-align:center;
-color:gold;
-font-size:40px;
-margin-bottom:40px;
+margin-bottom:20px;
 }
 
-/* SERVICE BLOCK */
-.service{
-display:flex;
-flex-wrap:wrap;
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card{
 background:#111;
-border-radius:15px;
-overflow:hidden;
-margin-bottom:30px;
+padding:25px;
+border-radius:14px;
 border:1px solid #222;
+transition:0.3s;
 }
 
-.service img{
-width:100%;
-max-width:400px;
-object-fit:cover;
+.card:hover{
+transform:translateY(-5px);
+border-color:#f5c542;
 }
 
-.service-content{
-padding:20px;
-flex:1;
+.card h3{
+color:#f5c542;
 }
 
-.service-content h2{
-color:gold;
-margin-top:0;
-}
-
-.service-content p{
+.card p{
 color:#ccc;
 line-height:1.6;
 }
 
+/* CTA BUTTONS */
 .btn{
 display:inline-block;
 margin-top:15px;
-padding:12px 25px;
-background:gold;
-color:black;
-border-radius:50px;
+padding:12px 20px;
+border-radius:40px;
 text-decoration:none;
 font-weight:bold;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.email{
+background:#333;
+color:white;
+margin-left:8px;
+}
+
+/* INFO BANNER */
+.banner{
+background:#111;
+padding:25px;
+text-align:center;
+border-top:1px solid #222;
+border-bottom:1px solid #222;
+color:#ccc;
 }
 
 /* FOOTER */
@@ -92,20 +148,8 @@ footer{
 text-align:center;
 padding:20px;
 color:#777;
-border-top:1px solid #222;
 }
 
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:14px 18px;
-border-radius:50px;
-color:white;
-text-decoration:none;
-}
 </style>
 </head>
 
@@ -120,98 +164,101 @@ text-decoration:none;
 <a href="contact.html">Contact</a>
 </nav>
 
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+<h1>Our Services</h1>
+<p>
+We provide trusted travel, study, and relocation support designed to make your journey simple, clear, and stress-free. Every service comes with real guidance and personal support.
+</p>
+</div>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+We don’t just offer services — we guide you step-by-step until your journey is complete.
+</div>
+
+<!-- SERVICES -->
 <div class="container">
 
-<h1>Our Services</h1>
+<h2>What We Offer</h2>
+
+<div class="grid">
 
 <!-- FLIGHTS -->
-<div class="service">
-<img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05">
-<div class="service-content">
-<h2>✈️ Flight Booking</h2>
+<div class="card">
+<h3>✈ Flight Booking</h3>
 <p>
-We provide reliable international flight booking services with access to multiple airlines and routes.
-Our goal is to help you find the best prices while ensuring convenience and comfort.
-We assist with planning your journey, understanding baggage policies, and selecting the right travel schedules.
-Whether you are traveling for work, study, or vacation, we make the process simple and stress-free.
+We help you find affordable and reliable flight options based on your destination and budget. Our goal is to ensure you travel smoothly without confusion or hidden costs.
 </p>
-<a class="btn" href="https://wa.me/971583017066?text=Hi%20I%20am%20interested%20in%20Flight%20Booking">Enquire Now</a>
-</div>
+
+<a class="btn whatsapp" href="https://wa.me/971583017066">Enquire on WhatsApp</a>
+<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
 <!-- VISA -->
-<div class="service">
-<img src="https://images.unsplash.com/photo-1508780709619-79562169bc64">
-<div class="service-content">
-<h2>🛂 Visa Assistance</h2>
+<div class="card">
+<h3>🛂 Visa Assistance</h3>
 <p>
-We provide complete visa application support for tourist, work, and study visas.
-Our team guides you through document preparation, submission, and embassy requirements.
-We help reduce errors and improve your chances of approval by ensuring everything is properly prepared.
+We guide you through visa applications with clear steps and support. Whether it’s work, study, or travel visas, we help reduce mistakes and increase approval confidence.
 </p>
-<a class="btn" href="https://wa.me/971583017066?text=Hi%20I%20need%20Visa%20Assistance">Enquire Now</a>
-</div>
+
+<a class="btn whatsapp" href="https://wa.me/971583017066">Enquire on WhatsApp</a>
+<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
 <!-- JOBS -->
-<div class="service">
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-<div class="service-content">
-<h2>🌍 Jobs Abroad</h2>
+<div class="card">
+<h3>💼 Jobs Abroad</h3>
 <p>
-We connect individuals with verified job opportunities abroad and provide guidance throughout the application process.
-We assist with CV preparation, application submission, and understanding job requirements in different countries.
+We connect you with verified job opportunities and guide you on requirements, documentation, and preparation for international employment pathways.
 </p>
-<a class="btn" href="https://wa.me/971583017066?text=Hi%20I%20am%20looking%20for%20Jobs%20Abroad">Enquire Now</a>
-</div>
+
+<a class="btn whatsapp" href="https://wa.me/971583017066">Enquire on WhatsApp</a>
+<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
 <!-- STUDY -->
-<div class="service">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div class="service-content">
-<h2>🎓 Study Abroad</h2>
+<div class="card">
+<h3>🎓 Study Abroad</h3>
 <p>
-We help students access international education opportunities by guiding them through university applications and visa processes.
-We assist in selecting courses, institutions, and scholarship opportunities.
+We assist with university applications, admissions guidance, and documentation support to help you start your international education journey.
 </p>
-<a class="btn" href="https://wa.me/971583017066?text=Hi%20I%20am%20interested%20in%20Studying%20Abroad">Enquire Now</a>
-</div>
+
+<a class="btn whatsapp" href="https://wa.me/971583017066">Enquire on WhatsApp</a>
+<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
-<!-- PICKUP -->
-<div class="service">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
-<div class="service-content">
-<h2>🚗 Airport Pick-up</h2>
+<!-- AIRPORT -->
+<div class="card">
+<h3>🚖 Airport Pick-up</h3>
 <p>
-We offer reliable airport pick-up services in Dubai to ensure a smooth and comfortable arrival.
-Our drivers are professional and punctual, making your first experience stress-free.
+We provide safe and reliable airport pick-up services in Dubai to ensure you arrive smoothly and comfortably at your destination.
 </p>
-<a class="btn" href="https://wa.me/971583017066?text=Hi%20I%20need%20Airport%20Pick-up">Enquire Now</a>
-</div>
+
+<a class="btn whatsapp" href="https://wa.me/971583017066">Book on WhatsApp</a>
+<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
 <!-- TOURS -->
-<div class="service">
-<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
-<div class="service-content">
-<h2>🏙️ City Tours</h2>
+<div class="card">
+<h3>🏙 City Tours (Dubai)</h3>
 <p>
-We provide guided Dubai city tours including major landmarks, cultural sites, and luxury experiences.
-Our tours are customized to match your interests and schedule.
+Explore Dubai with guided city tours designed for visitors and newcomers who want a safe, structured, and enjoyable experience.
 </p>
-<a class="btn" href="https://wa.me/971583017066?text=Hi%20I%20am%20interested%20in%20City%20Tours">Enquire Now</a>
-</div>
+
+<a class="btn whatsapp" href="https://wa.me/971583017066">Book on WhatsApp</a>
+<a class="btn email" href="mailto:bridgetravelsolutionsglobal@gmail.com">Email</a>
 </div>
 
 </div>
+</div>
 
+<!-- FOOTER -->
 <footer>
-© 2026 Bridge Travel Solutions
+© 2026 Bridge Travel Solutions | Dubai UAE
 </footer>
-
-<a class="whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
 
 </body>
 </html>
