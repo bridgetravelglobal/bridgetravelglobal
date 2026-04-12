@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Bridge Travel Solutions</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#050505;
+color:white;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:center;
+gap:25px;
+padding:15px;
+background:#000;
+border-bottom:1px solid gold;
+}
+
+nav a{
+color:#ccc;
+text-decoration:none;
+}
+
+nav a:hover{color:gold;}
+
+/* CONTAINER */
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1{
+text-align:center;
+color:gold;
+margin-bottom:40px;
+}
+
+/* GRID */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+color:#777;
+border-top:1px solid #222;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:14px 18px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+<h1>Travel Gallery</h1>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+<img src="https://images.unsplash.com/photo-1502920917128-1aa500764ce7">
+<img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
+<img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b">
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Bridge Travel Solutions
+</footer>
+
+<a class="whatsapp" href="https://wa.me/971583017066">WhatsApp</a>
+
+</body>
+</html>
